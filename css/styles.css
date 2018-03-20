@@ -23,6 +23,12 @@
 
 }
 
+.logo-img {
+    height: inherit;
+    padding: 0px 0px;
+    max-width: 200px;
+}
+
 .search-input {
     float: left;
     border: 0;
@@ -37,5 +43,27 @@
     margin: 0;
     float: left;
     height: 40px;
-
+}
+.toolbar {
+    float: left;
+}
+.tool-selling{
+    height: inherit;
+}
+.tool-selling-btn {
+    height: inherit;
+    background: none;
+    color: #00b1ff;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+.tool-selling {
+    height: inherit;
+    width: 200px;
+    margin: 0 0;
+    float: left;
+}
+.selling-toggle {
+    float: none;
 }
