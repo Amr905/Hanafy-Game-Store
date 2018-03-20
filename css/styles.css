@@ -43,27 +43,61 @@
     margin: 0;
     float: left;
     height: 40px;
+    cursor: pointer;
 }
-.toolbar {
+
+.tool-bar {
     float: left;
+    max-width: 200px;
+
 }
-.tool-selling{
-    height: inherit;
+
+.tool-selling {
+    float: left;
+    height: 100px;
 }
+
 .tool-selling-btn {
-    height: inherit;
+    height: 70px;
     background: none;
     color: #00b1ff;
     border: 0;
     padding: 0;
     margin: 0;
+    cursor: pointer;
 }
+
+
+
 .tool-selling {
     height: inherit;
     width: 200px;
     margin: 0 0;
     float: left;
 }
+
 .selling-toggle {
-    float: none;
+    float: left;
+    display: none;
+
+}
+
+.toggle-list {
+
+    list-style: none;
+    padding: 0 10px;
+    max-width: 200px;
+}
+
+.toggle-list li {
+    padding: 10px 10px;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+}
+
+.tool-selling:hover ~ .selling-toggle {
+    display: block;
+}
+.selling-toggle:hover {
+    display: block;
 }
