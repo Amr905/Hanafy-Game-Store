@@ -104,6 +104,11 @@
 .selling-toggle:hover {
     display: block;
 }
+/*----------------*/
+
+body {
+    margin: 0;
+}
 
 /* ---------footer-------------*/
 
