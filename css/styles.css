@@ -105,6 +105,7 @@
 .selling-toggle:hover {
     display: block;
 }
+
 /*----------------*/
 
 body {
@@ -206,11 +207,7 @@ body {
 }
 
 
-.footer-apps {
 
-    display: flex;
-    width: 20px;
-}
 
 .paypal {
     width: 70px;
@@ -251,8 +248,12 @@ body {
     padding-bottom: 1;
 }
 
-.footer-apps{
+.footer-payment {
     color: #ffffff;
+}
+
+.footer-payment-margin {
+    margin-top: -35px;
 }
 
 .footer hr {
