@@ -251,10 +251,8 @@ body {
     padding-bottom: 1;
 }
 
-.footer-apps p {
+.footer-apps{
     color: #ffffff;
-
-
 }
 
 .footer hr {
