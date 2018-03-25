@@ -70,8 +70,6 @@
 }
 
 
-
-
 .tool-selling {
     height: inherit;
     width: 200px;
@@ -82,11 +80,15 @@
 .selling-toggle {
     float: left;
     display: none;
+    background: #F5F5F5;
+    border-style: solid;
+    border-width: thin;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 
 }
 
 .toggle-list {
-
     list-style: none;
     padding: 0 10px;
     max-width: 200px;
