@@ -105,6 +105,7 @@
 .selling-toggle:hover {
     display: block;
 }
+
 /*----------------*/
 .login{
     float: right;
@@ -221,11 +222,7 @@ body {
 }
 
 
-.footer-apps {
 
-    display: flex;
-    width: 20px;
-}
 
 .paypal {
     width: 70px;
@@ -266,10 +263,12 @@ body {
     padding-bottom: 1;
 }
 
-.footer-apps p {
+.footer-payment {
     color: #ffffff;
+}
 
-
+.footer-payment-margin {
+    margin-top: -35px;
 }
 
 .footer hr {
