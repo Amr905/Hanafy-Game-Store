@@ -47,10 +47,91 @@
             </div>
         </div>
     </div>
+
+    <div class="container test">
+        <div class="row">
+            <div class="col-lg-12" >
+                <div class="mySlides" style="background-image: url('img/2.jpg');background-size:cover; width:1140px;height:500px;">
+                    <span>kimo sheba</span>
+                </div>
+                <div class="mySlides" style="background-image: url('img/3.jpg');background-size:cover; width:1140px;height:500px">
+                    <span>kimo sheba</span>
+                </div>
+                <div class="mySlides" style="background-image: url('img/5.jpg');background-size:cover; width:1140px ;height:500px">
+                    <span>kimo sheba</span>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="img/2.jpg" width="300px" height="169px" style="height:169px; margin-top:20px"
+                    onclick="currentDiv(1)">
+            </div>
+            <div class="col-lg-4" style="text-align:center">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="img/3.jpg" width="300px" height="169px" style="height:169px; margin-top:20px"
+                    onclick="currentDiv(2)">
+            </div>
+            <div class="col-lg-4" style="text-align:right;">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="img/5.jpg" width="300px" height="169px" style="height:169px; margin-top:20px"
+                    onclick="currentDiv(3)">
+            </div>
+        </div>
+    </div>
+    
     <div>lablabal body test Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id tincidunt orci. Nulla ac augue pulvinar dolor auctor vulputate. Integer commodo eu tortor ac consequat. Ut aliquet diam vitae facilisis aliquet. Vestibulum in molestie justo. Donec leo odio, fermentum et sapien at, fermentum vehicula magna. Donec iaculis erat massa, vel facilisis nunc tempus in. Mauris turpis ligula, porttitor eget odio eu, porttitor porta elit. Integer eu nunc hendrerit, sagittis enim et, dapibus leo. Ut pellentesque elementum erat sit amet pellentesque. Proin nec vulputate risus. Quisque et condimentum dui. Fusce eu fringilla lectus. Nam nec diam placerat tortor laoreet tempus. Duis blandit, ipsum in vulputate efficitur, erat augue bibendum erat, non pretium sapien massa vitae turpis. Morbi sagittis felis elit, tincidunt sollicitudin purus tristique volutpat. Fusce felis odio, cursus id molestie eget, placerat vitae mauris. In fringilla, sem pretium rhoncus vestibulum, purus urna efficitur leo, id sodales eros dolor ac ipsum. Donec ut consectetur enim. Proin mattis magna vestibulum consequat euismod. Donec tincidunt tempus augue quis imperdiet. Suspendisse et consequat nibh. Proin ultrices tempus justo at posuere. Nam leo orci, mattis et mi id, condimentum ultrices ex. Nunc nisl augue, vulputate ut pulvinar id, congue non risus. Nam in placerat sem, sed malesuada magna. Morbi eu tortor iaculis, pharetra sapien nec, pretium lectus. </div>
-    <!----------------------- footer ------------->
+    <!----------------------- footer -------------->
 
 </body>
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+   var kimo= setInterval(showDivs,5000);
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+        clearInterval(kimo);
+        showDivs(slideIndex = n);
+        kimo = setInterval(showDivs,5000);
+       
+    }
+    
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        
+        if (n > x.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = x.length }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+        }
+       
+        if (slideIndex > x.length) { slideIndex = 1 }
+        x[slideIndex - 1].style.display = "grid";
+        dots[slideIndex - 1].className += " w3-opacity-off";
+        slideIndex++;
+        //setTimeout(showDivs, 10000);
+
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
 <div class="footer">
 
     <div class="social ">
@@ -124,7 +205,7 @@
         <h4> all rights reserved</h4>
     </div>
     </div>
-    -->
+    
 </div>
 
 </html>
