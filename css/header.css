@@ -1,0 +1,123 @@
+.header {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background: #181818;
+    margin: 0;
+    z-index: 999;
+}
+
+.header-logo {
+    height: inherit;
+    width: 200px;
+    margin: 0 0;
+    float: left;
+}
+
+.search-form {
+    float: left;
+    margin: 10px;
+    max-width: 500px;
+    width: 100%;
+
+}
+
+.logo-img {
+    height: inherit;
+    padding: 0px 0px;
+    max-width: 200px;
+}
+
+.search-input {
+    float: left;
+    border: 0;
+    height: 40px;
+    width: 70%;
+}
+
+.search-submit {
+    background: #00b1ff;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    float: left;
+    height: 40px;
+    cursor: pointer;
+}
+
+.tool-bar {
+    float: left;
+    max-width: 200px;
+
+}
+
+.tool-selling {
+    float: left;
+    height: 100px;
+    height: inherit;
+
+}
+
+.tool-selling-btn {
+    height: 70px;
+    background: none;
+    color: #00b1ff;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+
+.tool-selling {
+    height: inherit;
+    width: 200px;
+    margin: 0 0;
+    float: left;
+}
+
+.selling-toggle {
+    float: left;
+    display: none;
+    background: #F5F5F5;
+    border-style: solid;
+    border-width: thin;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+
+.toggle-list {
+    list-style: none;
+    padding: 0 10px;
+    max-width: 200px;
+}
+
+.toggle-list li {
+    padding: 10px 10px;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+}
+
+.tool-selling:hover ~ .selling-toggle {
+    display: block;
+}
+
+.selling-toggle:hover {
+    display: block;
+}
+
+
+#wrapper {
+    width:1020px;
+    margin: 0 auto;
+
+}
+#content {
+    margin-top: 100px;
+    width: 100%;
+    background-color: #FFFFFF;
+
+}

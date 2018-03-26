@@ -1,7 +1,8 @@
 <!doctype html>
 <html>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <head>
+
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -10,121 +11,24 @@
 
 <body>
     <div class="header">
-        <div class="header-logo"><img class="logo-img" src="img/logo.png" alt="Logo"></div>
-        <div class="search-form">
-            <form action="#"><input type="search" placeholder="Search" class="search-input"><button type="submit" class="search-submit"><img src="img/#" alt="Search"></button></form>
-        </div>
-        <div class="login"> <button class="align" class="tool-login-btn"><a href="login.html">Login</a></button></div>
-        <div class="tool-bar">
-            <div class="tool-selling"><button class="tool-selling-btn">Start Selling Now</button></div>
+    </div>
+    <div id="content">
+        <div id="wrapper" >
 
-
-
-            <div class="selling-toggle">
-                <ul class="toggle-list">
-                    <li>
-                        <a href="#">
-                            <img src="#">
-                            <span>Add Product</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="#">
-                            <span>Add Product</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="#">
-                            <span>Add Product</span>
-                        </a>
-                    </li>
-
-                    <li><a href="#"><img src="#"><span>Add Product</span></a></li>
-
-                </ul>
-            </div>
         </div>
     </div>
-    <div>lablabal body test Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id tincidunt orci. Nulla ac augue pulvinar dolor auctor vulputate. Integer commodo eu tortor ac consequat. Ut aliquet diam vitae facilisis aliquet. Vestibulum in molestie justo. Donec leo odio, fermentum et sapien at, fermentum vehicula magna. Donec iaculis erat massa, vel facilisis nunc tempus in. Mauris turpis ligula, porttitor eget odio eu, porttitor porta elit. Integer eu nunc hendrerit, sagittis enim et, dapibus leo. Ut pellentesque elementum erat sit amet pellentesque. Proin nec vulputate risus. Quisque et condimentum dui. Fusce eu fringilla lectus. Nam nec diam placerat tortor laoreet tempus. Duis blandit, ipsum in vulputate efficitur, erat augue bibendum erat, non pretium sapien massa vitae turpis. Morbi sagittis felis elit, tincidunt sollicitudin purus tristique volutpat. Fusce felis odio, cursus id molestie eget, placerat vitae mauris. In fringilla, sem pretium rhoncus vestibulum, purus urna efficitur leo, id sodales eros dolor ac ipsum. Donec ut consectetur enim. Proin mattis magna vestibulum consequat euismod. Donec tincidunt tempus augue quis imperdiet. Suspendisse et consequat nibh. Proin ultrices tempus justo at posuere. Nam leo orci, mattis et mi id, condimentum ultrices ex. Nunc nisl augue, vulputate ut pulvinar id, congue non risus. Nam in placerat sem, sed malesuada magna. Morbi eu tortor iaculis, pharetra sapien nec, pretium lectus. </div>
+
     <!----------------------- footer ------------->
 
 </body>
-<div class="footer">
+<div class="footer"></div>
 
-    <div class="social ">
-        <a href="#" class="fa fa-facebook ra"></a>
-        <a href="#" class="fa fa-twitter ra"></a>
-        <a href="#" class="fa fa-youtube ra"></a>
-        <a href="#" class="fa fa-instagram ra"></a>
+<script>
+ $(document).ready(function (e) {
+$( ".header" ).load( "header.html" );
+$( ".footer" ).load( "footer.html" );
 
-    </div>
-    <hr>
-    <div class="footer-links">
-        <div class="row">
-            <div class="col-lg-5">
-                <ul>
-                    <li><a href="#">How to use it</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Terms &amp; Conditions</a></li>
-
-                </ul>
-            </div>
-
-
-            <div class="col-lg-5">
-                <div class="row">
-                    <span class="footer-payment col-lg-12">payment supported:</span>
-
-                </div>
-                <div class="row footer-payment-margin">
-
-                    <img class="paypal" src="img/paypal.svg">
-                    <img class="visa" src="img/credit_card.svg">
-                    <img class="fawry" src="img/fawry-en1.png">
-                    <img class="vodafone" src="img/vodafone-cash.png">
-                    <img class="cashu" src="img/cashu-ar.png">
-                </div>
-
-
-            </div>
-        </div>
-
-    </div>
-    <div class="footer-rights">
-        <h6> Copyright © 2018 Hanafy game store all rights reserved</h6>
-    </div>
-    <!--
-    <div class="footer ">
-    <div class="social">
-        <a href="#" class="fa fa-facebook ra"></a>
-        <a href="#" class="fa fa-twitter ra"></a>
-        <a href="#" class="fa fa-youtube ra"></a>
-        <a href="#" class="fa fa-instagram ra"></a>
-    </div>
-    <div class="footer-links">
-        <ul>
-            <li><a href="#">How to use it</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-
-        </ul>
-    </div>
-    <div class="footer-apps">
-
-        <img src="img/paypal.svg">
-        <img src="img/credit_card.svg">
-
-    </div>
-
-    <div class="footer-rights">
-        <h4> all rights reserved</h4>
-    </div>
-    </div>
-    -->
-</div>
+});
+</script>
 
 </html>
