@@ -1,12 +1,13 @@
 <!doctype html>
 <html>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <head>
 
     <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/home.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
 <body>
@@ -14,7 +15,72 @@
     </div>
     <div id="content">
         <div id="wrapper" >
+                <div class="row">
+            <div class="col-lg-12">
+                <div class="mySlides" style="background-image: url('img/2.jpg')">
+                    <div class="div_black"></div>
+                    <span class="item">Redemption comes at a high cost… unless you have these discounts! </span>
+                </div>
+                <div class="mySlides" style="background-image: url('img/3.jpg')">
+                    <div class="div_black"></div>
+                    <span class="item">Spring brought fresh games with it!</span>
+                </div>
+                <div class="mySlides" style="background-image: url('img/5.jpg')">
+                    <div class="div_black"></div>
+                    <span class="item">Spring brought fresh games with it!</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="img/2.jpg" width="300px" height="169px" style="height:169px; margin-top:20px"
+                    onclick="currentDiv(1)">
+            </div>
+            <div class="col-lg-4" style="text-align:center">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="img/3.jpg" width="300px" height="169px" style="height:169px; margin-top:20px"
+                    onclick="currentDiv(2)">
+            </div>
+            <div class="col-lg-4" style="text-align:right;">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="img/5.jpg" width="300px" height="169px" style="height:169px; margin-top:20px"
+                    onclick="currentDiv(3)">
+            </div>
+        </div>
 
+        <div class="row" style="margin-top:50px">
+
+            <div class="col-lg-3">
+                <div class="item_card">
+                    <div class="card_img">
+                        <a href="#">
+                            <img class="Selled_img_Atr" src="img/FortniteSell.jpg" alt="Fortnite standard edition Epic Games Key PC GLOBAL">
+                        </a>
+                    </div>
+                    <div class="card_body">
+                        <h3 class="card_title">
+                            <a href="#">Fortnite standard edition Epic Games Key PC GLOBAL</a>
+                        </h3>
+                    </div>
+
+                    <div class="card_price">
+                        <span class="price">10.99
+                            <sub class="price_Currency">EGP</sub>
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="item_card">
+
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="item_card"></div>
+            </div>
+            <div class="col-lg-3">
+                <div class="item_card"></div>
+            </div>
+        </div>
         </div>
     </div>
 
@@ -22,7 +88,8 @@
 
 </body>
 <div class="footer"></div>
-
+<script type="text/javascript" src="js/script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
  $(document).ready(function (e) {
 $( ".header" ).load( "header.html" );
@@ -30,5 +97,15 @@ $( ".footer" ).load( "footer.html" );
 
 });
 </script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </html>

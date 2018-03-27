@@ -1,0 +1,184 @@
+
+
+#test{
+
+   height: inherit;
+   margin-top: 100px;
+
+}
+
+
+
+.mySlides {
+    display:none;
+    z-index: 1;
+    width:100%;
+    height:430px;
+    background-position: inherit;
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    animation: mymove 5s infinite;
+}
+.ImgSlides
+{
+    display:grid;
+    animation: s 5s infinite;
+}
+
+@keyframes s {
+    0%, 100% {
+        transform: scaleX(1);
+
+      }
+      50% {
+        transform: scaleX(2)
+      }
+}
+@keyframes mymove {
+    0%, 100% {
+        background-size: 100% 100%;
+        background-position: top left;
+      }
+      50% {
+        background-size:130% 130%;
+        background-position:bottom right;
+      }
+}
+/*SlideShow Css*/
+.slider{
+    /*width: 150px;*/
+    height: 600px;
+    background: url(Call-of-duty.jpg);
+    margin: 100px auto;
+    animation: slide 20s infinite;
+
+}
+@keyframes slide{
+    25%{
+        background: url(2.jpg);
+    }
+    50%{
+        background: url(3.jpg);
+    }
+
+    75%{
+        background: url(4.jpeg);
+    }
+    100%{
+        background: url(Call-of-duty.jpg);
+    }
+}
+
+.div_black
+{
+    position: absolute;
+   /*margin-top: 31%;*/
+    height:430px;
+    width: 97%;
+    /*padding: 20px;*/
+    /*opacity: 0.1;*/
+    /*background-color: #000;  */
+    background: linear-gradient(to bottom,transparent 20%,black 90% );
+    z-index: 0;
+}
+.item{
+    margin-top: 0%;
+    display: block;
+    color: #fff;
+    text-shadow:0px 0px 5px #000;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 700;
+   padding-top: 32%;
+   padding-left: 5%;
+   z-index: 1;
+}
+.item:hover{
+	text-shadow:0px 0px 2px #ffffff;
+}
+.item_card
+{
+    width: inherit;
+    min-height: 320px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.281);
+    transition: box-shadow 0.3s ease-in-out;
+}
+.item_card:hover{
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.356);
+}
+.card_img{
+    z-index: 1;
+    display: block;
+    position: relative;
+    text-align: center;
+    height: 157px;
+    box-sizing: inherit;
+
+}
+.card_body{
+    padding: 20px;
+    width: 268.2px;
+    height: 80px;
+
+}
+.card_title
+{
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    font-weight: 700;
+    line-height: 20px;
+    max-height: 4.5em;
+    overflow: hidden;
+
+}
+.card_title a
+{
+    color: rgba(0,0,0,.87);
+}
+.card_title a:hover
+{
+    text-decoration: none;
+    color: rgba(0,0,0,.87);
+}
+h3.card_title
+{
+    font-size: 14px;
+
+}
+.Selled_img_Atr
+{
+    text-indent: -999999px;
+    color: transparent;
+    white-space: nowrap;
+    width: 100%;
+    height: 100%;
+    border-style: none;
+}
+.card_price
+{
+    bottom: 30px;
+    left: 0;
+    padding-left:15%;
+    padding-right: 20px;
+    position: absolute;
+    width: 100%;
+}
+.price{
+    display: block;
+    font-weight: 700;
+    color: #f05f00;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 21px;
+}
+.price_Currency
+{
+    font-size: 14px;
+    font-weight: 500;
+    left: 4px;
+    line-height: 19px;
+    top: -3px;
+}
