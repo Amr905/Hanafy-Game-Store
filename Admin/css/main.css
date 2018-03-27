@@ -140,3 +140,15 @@ li:hover {
 .front {
     z-index: 1;
 }
+
+.footer {
+    background-color: #181818;
+    bottom: 0;
+    width: 500px;
+    margin-left: 0px;
+    margin-top: 150px;
+    height: 40px;
+    color: #fff;
+    text-align: center;
+    padding-top: 5px;
+}
