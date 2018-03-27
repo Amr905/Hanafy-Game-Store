@@ -143,10 +143,11 @@ li:hover {
 
 .footer {
     background-color: #181818;
+    /*margin-top: 98px;*/
     bottom: 0;
     width: 500px;
+    width: 500px;
     margin-left: 0px;
-    margin-top: 150px;
     height: 40px;
     color: #fff;
     text-align: center;
