@@ -110,18 +110,21 @@
 }
 .login{
     float: right;
-    height: 100px;
     height: inherit;
 
 }
 
-.tool-login-btn {
-    height: 70px;
-    background: none;
+.header-btn {
+    padding: 0 20px;
     color: #00b1ff;
-    border: 0;
-    padding: 20px,20px;
-    margin: 0;
+    background: #000;
+    float: left;
+    height: 100%;
     cursor: pointer;
 }
 
+.cart-section {
+    float: right;
+    color: #00b1ff;
+    height: inherit;
+}
