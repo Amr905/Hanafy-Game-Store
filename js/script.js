@@ -1,11 +1,5 @@
 var slideIndex = 1;
-window.onload = function () {
-     showDivs(slideIndex);
-};
-
-
-
-    var kimo = setInterval(showDivs, 5000);
+var kimo = setInterval(showDivs, 5000);
     function plusDivs(n) {
         showDivs(slideIndex += n);
     }
@@ -14,13 +8,12 @@ window.onload = function () {
         clearInterval(kimo);
         showDivs(slideIndex = n);
         kimo = setInterval(showDivs, 5000);
-
     }
 
     function showDivs(n) {
         var i;
         var x = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("demo");
+        var dots = document.getElementsByClassName("dot");
 
         if (n > x.length) { slideIndex = 1 }
         if (n < 1) { slideIndex = x.length }
@@ -28,13 +21,14 @@ window.onload = function () {
             x[i].style.display = "none";
         }
         for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+            dots[i].className = dots[i].className.replace(" active", "");
         }
 
         if (slideIndex > x.length) { slideIndex = 1 }
         x[slideIndex - 1].style.display = "grid";
-        dots[slideIndex - 1].className += " w3-opacity-off";
+        dots[slideIndex - 1].className += " active";
         slideIndex++;
-        //setTimeout(showDivs, 10000);
-
     }
+    window.onload = function () {
+        showDivs(slideIndex);
+   };
