@@ -1,7 +1,6 @@
 <!doctype html>
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
 <head>
 
     <link rel="stylesheet" href="css/styles.css" type="text/css">
@@ -16,33 +15,54 @@
 <body>
     <div class="header"></div>
 
-    <div id="content">
-        <div id="wrapper">
-            <form method="post" action="index.html">
-                <div class="box">
-                    <h1>Sign Up</h1>
-
-                    <input type="Name" name="Name" value="Name" onFocus="field_focus(this, 'Name');" onblur="field_blur(this, 'Name');" class="email" />
-
-                    <input type="Phone Number" name="Phone Number" value="Phone Number" onFocus="field_focus(this, 'Phone Number');" onblur="field_blur(this, 'Phone Number');" class="email" />
-
-
-                    <input type="email" name="email" value="email" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'email');" class="email" />
-
-
-                    <input type="password" name="email" value="email" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'email');" class="email" />
-
-                    <a href="">
-                        <div class="btn">Submit</div>
-                    </a>
-                    <!-- End Btn -->
-
-                </div>
-                <!-- End Box -->
-
-            </form>
-        </div>
-
+    <div class="main">
+	<div class="social-icons">
+		 <div class="col_1_of_f span_1_of_f"><a href="#">
+		    <ul class='facebook'>
+		    	<i class="fb"> </i>
+		    	<li>SignUp with Facebook</li>
+		    	<div class='clear'> </div>
+		    </ul>
+		    </a>
+		 </div>	
+		 <div class="col_1_of_f span_1_of_f"><a href="#">
+		    <ul class='twitter'>
+		      <i class="tw"> </i>
+		      <li>SignUp with Twitter</li>
+		      <div class='clear'> </div>
+		    </ul>
+		    </a>
+		</div>
+		<div class="clear"> </div>	
+      </div>
+      <h2>Or SignUp with</h2>
+		<form>
+            <div class="lable">
+		        <div class="col_1_of_2 span_1_of_2">	<input type="text" class="text" value="First Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'First Name';}" id="active"></div>
+                <div class="col_1_of_2 span_1_of_2"><input type="text" class="text" value="Last Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Last Name';}"></div>
+                <div class="clear"> </div>
+		   </div>
+            <h7>Email</h7>
+		   <div class="lable-2"> 
+               
+		        <input type="text" class="text" value="your@email.com " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'your@email.com ';}">
+               <br>
+               <h7>Password</h7>
+		        <input type="password" class="text" value="Password " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password ';}">
+               
+		   </div>
+            <h7>Confirm Password</h7>
+            <input type="password" class="text" value="Password " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password ';}">
+            <br>
+		   <h2>already have an account ?<a login href="login.html"> login</a></h2>
+		   <div class="submit">
+			  <input type="submit" onclick="" value="Create account" >
+		   </div>
+		   <div class="clear"> </div>
+		</form>
+    <br><br>
+		</div>
+     
     </div>
 
     <!----------------------- footer ------------->
@@ -51,11 +71,13 @@
 <div class="footer"></div>
 
 <script>
-    $(document).ready(function(e) {
-        $(".header").load("header.html");
-        $(".footer").load("footer.html");
+ $(document).ready(function (e) {
+$( ".header" ).load( "header.html" );
+$( ".footer" ).load( "footer.html" );
 
-    });
+});
 </script>
 
 </html>
+
+

@@ -15,27 +15,48 @@
 <body>
     <div class="header"></div>
 
-    <div id="content">
-        <div id="wrapper" >
-            <form method="post" action="index.html">
-	<div class="box">
-	<h1>Login</h1>
+    <div class="main">
+	<div class="social-icons">
+		 <div class="col_1_of_f span_1_of_f"><a href="#">
+		    <ul class='facebook'>
+		    	<i class="fb"> </i>
+		    	<li>Login with Facebook</li>
+		    	<div class='clear'> </div>
+		    </ul>
+		    </a>
+		 </div>	
+		 <div class="col_1_of_f span_1_of_f"><a href="#">
+		    <ul class='twitter'>
+		      <i class="tw"> </i>
+		      <li>Login with Twitter</li>
+		      <div class='clear'> </div>
+		    </ul>
+		    </a>
+		</div>
+		<div class="clear"> </div>	
+        <h2>Or Login with</h2>
+      </div>
+      
+        <h7>Email</h7>
+		<form>
+		   <div class="lable-2">
+               
+		        <input type="text" class="text" value="your@email.com " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'your@email.com ';}">
+               <h7>password</h7>
+		        <input type="password" class="text" value="Password " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password ';}">
+               
+		   </div>
 
-	<input type="email" name="email" value="email" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'email');" class="email" />
-	  
-	<input type="password" name="email" value="email" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'email');" class="email" />
-	  
-	<a href=""><div class="btn">Sign In</div></a> <!-- End Btn -->
-
-	<a href="signup.html"><div id="btn2">Sign Up</div></a> <!-- End Btn2 -->
-	
-	<a href=""><p class="forgot">Forgot your password? <u style="color:#f1c40f;">Click Here!</u></p>
-	 <!-- End Box -->
-	
-	</form>
-	</div>
-
-        </div>
+           <h2> hey,no account yet?<a href="signup.html"> create one</a></h2>
+		   
+		   <div class="submit">
+			  <input type="submit" onclick="" value="Login" >
+		   </div>
+		   <div class="clear"> </div>
+		</form>
+    <br><br>
+		</div>
+     
     </div>
 
     <!----------------------- footer ------------->
@@ -52,5 +73,4 @@ $( ".footer" ).load( "footer.html" );
 </script>
 
 </html>
-
 
