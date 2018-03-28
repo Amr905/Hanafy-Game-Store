@@ -1,0 +1,31 @@
+.main-container {
+    background-color: #ededec;
+    margin-left: 40px;
+}
+
+input,
+select {
+    display: block;
+    border: #000;
+    border-style: ridge;
+    border-width: thin;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+button {
+    border: #000;
+    border-style: ridge;
+    border-width: thin;
+    padding: 1px;
+}
+
+. margin {
+    padding: 1000px;
+}
