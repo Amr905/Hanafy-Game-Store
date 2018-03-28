@@ -6,11 +6,12 @@
    margin-top: 100px;
 
 }
+
 .mySlides {
     display:none;
     z-index: 1;
     width:100%;
-    height:430px;
+    height:500px;
     background-position: inherit;
     background-size:100% 100%;
     background-repeat: no-repeat;
@@ -70,10 +71,10 @@
 {
     position: absolute;
    /*margin-top: 31%;*/
-    height:430px;
+    height:100%;
     width: 97.5%;
     /*padding: 20px;*/
-    opacity: 0.6;
+    opacity: 0.8;
     /*background-color: #000;  */
     background: linear-gradient(to bottom,transparent 300px,black 80% );
     z-index: 0;
@@ -86,7 +87,7 @@
     font-size: 30px;
     line-height: 30px;
     font-weight: 700;
-   padding-top: 35%;
+   padding-top: 42%;
    padding-left: 5%;
    z-index: 1;
 }
