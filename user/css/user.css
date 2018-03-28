@@ -1,0 +1,19 @@
+.nav {
+    background: #F5F5F5;
+    border-style: solid;
+    border-width: thin;
+
+}
+.user-list {
+    float: left;
+    list-style: none;
+    margin: 5px 40px;
+}
+.da {
+    width: 100%;
+}
+.user-box {
+    border-style: solid;
+    border-width: thin;
+    margin: 25px;
+}
