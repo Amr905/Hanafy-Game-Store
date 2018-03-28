@@ -153,3 +153,8 @@ li:hover {
     text-align: center;
     padding-top: 5px;
 }
+
+.offwhite {
+    background-color: #ededec;
+    margin-left: 40px;
+}
