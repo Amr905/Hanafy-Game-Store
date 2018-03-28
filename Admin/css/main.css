@@ -158,3 +158,8 @@ li:hover {
     background-color: #ededec;
     margin-left: 40px;
 }
+
+input,
+select {
+    display: block;
+}

@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<head>
+    <title>Admin-Products</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="col-lg-3 front">
+
+            <div class="left-menu">
+                <img src="../img/logo.png" class="logo">
+                <ul class="menu">
+
+                    <li> <a href="main.html"><i class="fa fa-tachometer-alt"></i>Dashbord </a></li>
+                    <li><a href="inbox.html"><i class="fa fa-envelope "></i>Inbox</a></li>
+                    <li><a href="products.html"><i class="fa fa-gamepad"></i>Products</a></li>
+                    <li><a href="orders.html"><i class="fa fa-file-alt"></i>Orders</a></li>
+
+
+                </ul>
+                <div class="fill-bg"></div>
+            </div>
+        </div>
+
+        <!----------------right page------------------------->
+        <div class="col-lg-9">
+            <div class="row">
+                <div class="col-lg-9 bar">
+                    <div class="row">
+                        <div class="col-lg-7 message-height ">
+                            <h4>Prouducts </h4>
+                        </div>
+
+                        <div class="col-lg-3  message-height">
+                            <a href="index.html" class="logout">logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-8 offwhite">
+                <form id="product-form" action="#" method="post">
+                    <h4>Prouducts Mangements</h4>
+
+                    <fieldset>
+                        prodcuct ID : <input placeholder="product ID" type="number" autofocus>
+                    </fieldset>
+                    <fieldset>
+                        prodcuct name : <input placeholder="product Name" type="text" required>
+                    </fieldset>
+                    <fieldset>
+                        Serial number : <input placeholder="serial number" type="number" required>
+                    </fieldset>
+
+                    <fieldset>
+                        Status:
+                        <select name="status">
+                                <option value="update" selected>update</option>
+                                <option value="insert">insert</option>
+                                <option value="delete">delete</option>
+                          </select>
+                    </fieldset>
+                    <fieldset>
+                        <button name="submit" type="submit" id="submit">Submit</button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class=" col-lg-9 footer">
+                <h6>
+                    <h6> Copyright © 2018 Hanafy game store all rights reserved</h6>
+                </h6>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+
+
+
+</html>
