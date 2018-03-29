@@ -128,6 +128,9 @@
 .tool-cart:hover ~ .selling-toggle {
     display: block;
 }
+.tool-cart a {
+    color: #00B1FF;
+}
 
 .selling-toggle:hover {
     display: block;
@@ -147,6 +150,9 @@
     float: left;
     height: 100%;
     cursor: pointer;
+}
+.header-btn a {
+    color: #00B1FF;
 }
 .tool-selling-btn i {
     padding: 12px;
