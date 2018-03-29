@@ -99,6 +99,7 @@ body {
     color: #000000;
     padding: 1em 0;
     font-family: 'Oxygen', sans-serif;
+    margin-left: -70px;
 }
 
 .main h3 {
@@ -353,4 +354,55 @@ select {
     border: solid #000;
     border-style: ridge;
     border-width: thin;
+}
+
+.button {
+    background: #3B5998;
+    border: none;
+    color: #fff;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-decoration: none!important;
+
+}
+
+
+.facebook:hover {
+    background: #5D7BBA;
+}
+
+.facebook {
+    background: #3B5998;
+
+}
+
+.button:hover {
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    color: #fff;
+}
+
+.twitter {
+    background: #55ACEE;
+}
+
+.facebook {
+    background: #3B5998;
+
+}
+
+.twitter:hover {
+    background: #71B8ED;
+}
+
+.padding-logo {
+    padding-right: 15px;
 }
