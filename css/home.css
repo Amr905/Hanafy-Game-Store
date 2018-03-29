@@ -185,7 +185,6 @@ h3.card_title
     width: calc(100%-60px);
     float: left;
     margin-top: 30px;
-   
     overflow: hidden;
 }
 .dot {
@@ -202,4 +201,70 @@ h3.card_title
   .active, .dot:hover {
     background-color: #000000;
   }
-  
+
+.H-Header{
+    margin-bottom: 30px;
+    width: calc(100% - 60px);
+    float: left;
+    margin-left: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1.1;
+    padding: 45px 0 0 0; 
+    }
+.H-Header hr
+{
+    border-top: 1px solid rgba(0, 0,0, 0.12);
+    margin-top:20px;
+    width: 100%;
+}
+.H-title
+{
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(0,0,0,.87);
+}
+.Categories-filters
+{
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 30px;
+}
+.Categories-titles
+{
+    padding-bottom: 10px;
+    font-size: 18px;
+    font-weight: 400px;
+    line-height: 42px    
+}
+.categories-list
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    display: block;
+}
+.categories-list-item
+{
+    padding: 8px 0;
+    font-size: 14px;
+    box-sizing: inherit;
+}
+.categories-list-item a:hover 
+{
+    text-decoration: none;
+}
+.categories-radio-title
+{
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.radio{
+    cursor: pointer;
+    display: inline;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    margin: 7px 0;
+}
