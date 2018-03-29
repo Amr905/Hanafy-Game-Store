@@ -8,7 +8,10 @@
     margin: 0;
     z-index: 999;
 }
-
+.header a {
+    text-decoration: none;
+    text-decoration-color: none;
+}
 .header-logo {
     height: inherit;
     width: 200px;
@@ -18,16 +21,16 @@
 
 .search-form {
     float: left;
-    margin: 10px;
     max-width: 500px;
     width: 100%;
+    padding: 15px;
 
 }
 
 .logo-img {
     height: inherit;
-    padding: 0px 0px;
-    max-width: 200px;
+    padding: 10px 25px;
+    max-width: 300px;
 }
 
 .search-input {
@@ -35,6 +38,9 @@
     border: 0;
     height: 40px;
     width: 70%;
+    padding: 15px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
 }
 
 .search-submit {
@@ -45,6 +51,9 @@
     float: left;
     height: 40px;
     cursor: pointer;
+    width: 40px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .tool-bar {
@@ -52,7 +61,11 @@
     max-width: 200px;
 
 }
+.cart-tool-bar {
+    float: right;
+    max-width: 200px;
 
+}
 .tool-selling {
     float: left;
     height: 100px;
@@ -77,8 +90,12 @@
     margin: 0 0;
     float: left;
 }
+.tool-cart {
+    height: inherit;
+    width: 200px;
 
-.selling-toggle {
+}
+.toggle {
     float: left;
     display: none;
     background: #F5F5F5;
@@ -86,7 +103,7 @@
     border-width: thin;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-
+    width: 200px;
 }
 
 .toggle-list {
@@ -97,8 +114,7 @@
 
 .toggle-list li {
     padding: 10px 10px;
-    border-bottom-style: solid;
-    border-bottom-width: thin;
+
 }
 
 .tool-selling:hover ~ .selling-toggle {
@@ -108,6 +124,16 @@
 .selling-toggle:hover {
     display: block;
 }
+
+.tool-cart:hover ~ .selling-toggle {
+    display: block;
+}
+
+.selling-toggle:hover {
+    display: block;
+}
+
+
 .login{
     float: right;
     height: inherit;
@@ -116,15 +142,27 @@
 
 .header-btn {
     padding: 0 20px;
-    color: #00b1ff;
+    color: #00B1FF;
     background: inherit;
     float: left;
     height: 100%;
     cursor: pointer;
 }
-
-.cart-section {
+.tool-selling-btn i {
+    padding: 12px;
+}
+.checkout {
     float: right;
-    color: #00b1ff;
-    height: inherit;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    width: 90%;
+    border-radius: 5px;
+    background: #00B1FF;
+}
+.checkout a {
+    color: #FFF;
+}
+.clear {
+    clear: both;
 }
