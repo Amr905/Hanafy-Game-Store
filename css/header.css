@@ -117,7 +117,7 @@
 .header-btn {
     padding: 0 20px;
     color: #00b1ff;
-    background: #000;
+    background: inherit;
     float: left;
     height: 100%;
     cursor: pointer;
