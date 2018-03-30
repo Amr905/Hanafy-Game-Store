@@ -1,0 +1,13 @@
+.edit-form * {
+    padding: 10px;
+}
+.edit-form input {
+    border-style: solid;
+    border-width: thin;
+    border-radius: 5px;
+}
+.btn-submit {
+    float: right;
+    background: #00B1FF;
+    color: #fff;
+}

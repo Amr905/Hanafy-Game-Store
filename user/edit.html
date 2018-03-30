@@ -3,8 +3,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <head>
+    <script src="js/script.js"></script>
     <link rel="stylesheet" href="../css/styles.css" type="text/css">
     <link rel="stylesheet" href="css/user.css" type="text/css">
+    <link rel="stylesheet" href="css/edit.css" type="text/css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
@@ -32,25 +35,31 @@
                         <div class="col user-box">
                             <h5><i class="fa fa-user"></i>Edit Profile:</h5>
                             <hr>
-                            <form action="#">
+                            <form class="edit-form" name="profile" action="#" onsubmit="return isEmailAddress();">
                                 <div class="row">
-                                <label>First Name: *</label>
-                                <input type="text" class="text-f">
+                                    <label>First Name: *</label>
+                                    <input name="fname" type="text" class="text-f" value="Abdelrhman">
                                 </div>
                                 <div class="row">
-                                <label>Last Name: *</label>
-                                <input type="text"  class="text-f">
+                                    <label>Last Name: *</label>
+                                    <input name="lname" type="text" class="text-f" value="Zakaria">
                                 </div>
                                 <div class="row">
-                                <label>Gender: *</label>
-                                <input type="text">
-                                </div><div class="row">
-                                <label>E-mail: *</label>
-                                <input type="text">
-                                </div><div class="row">
-                                <label>Birth Date: *</label>
-                                <input type="text">
+                                    <label>Gender: *</label>
+                                    <select name="gender">
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
                                 </div>
+                                <div class="row">
+                                    <label>E-mail: *</label>
+                                    <input name="email" type="email">
+                                </div>
+                                <div class="row">
+                                    <label>Birth Date: *</label>
+                                    <input name="bd" type="date">
+                                </div>
+                                <input class="btn-submit" name="submi" type="submit" value="Save">
                             </form>
                         </div>
                     </div>
