@@ -128,12 +128,10 @@
 .toggle {
     float: left;
     display: none;
-    background: #F5F5F5;
-    border-style: solid;
-    border-width: thin;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    width: 200px;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .toggle-list {
@@ -143,8 +141,15 @@
 }
 
 .toggle-list li {
-    padding: 10px 10px;
 
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+
+}
+.toggle-list li:hover {
+    background-color: #ddd;
 }
 
 .tool-selling:hover ~ .selling-toggle {
