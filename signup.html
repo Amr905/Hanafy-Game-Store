@@ -5,7 +5,7 @@
     <title>signup-Hanafy Game Store </title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
-
+    <script src="js/valid.js"></script>
     <link rel="stylesheet" href="css/login-sginup.css" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -33,18 +33,18 @@
         </div>
 
         <h2>Or SignUp with</h2>
-        <form>
+        <form name="signup" onsubmit="return validateup();">
             <div class="lable">
-                <div class="col_1_of_2 span_1_of_2"> <input type="text" class="text" placeholder="First Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'First Name';}"></div>
-                <div class="col_1_of_2 span_1_of_2"><input type="text" class="text" value="Last Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Last Name';}"></div>
+                <div class="col_1_of_2 span_1_of_2"> <input name="fname" type="text" class="text" placeholder="First Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'First Name';}"></div>
+                <div class="col_1_of_2 span_1_of_2"><input name="lname" type="text" class="text" value="Last Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Last Name';}"></div>
                 <div class="clear"> </div>
             </div>
             Email
             <div class="lable-2">
 
-                <input type="text" class="text" placeholder="your@email.com " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'your@email.com ';}">
+                <input type="text" name="email" class="text" placeholder="your@email.com " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'your@email.com ';}">
                 <br> Password
-                <input type="password" class="text" placeholder="Password " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password ';}">
+                <input type="password" class="text" name="pass" placeholder="Password " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password ';}">
 
             </div>
             Confirm Password

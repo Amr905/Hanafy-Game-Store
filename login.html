@@ -5,7 +5,7 @@
 <head>
     <title>login-Hanafy Game Store </title>
     <link rel="stylesheet" href="css/styles.css" type="text/css">
-
+    <script src="js/valid.js"></script>
     <link rel="stylesheet" href="css/login-sginup.css" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -37,11 +37,11 @@
 
 
         Email
-        <form action="user/dashboard.html">
+        <form name="signin" action="user/dashboard.html" onsubmit="return validatein();">
             <div class="lable-2">
 
-                <input type="text" class="text" value="your@email.com " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'your@email.com ';}"> password
-                <input type="password" class="text" value="Password " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password ';}">
+                <input type="text" class="text" value="your@email.com " name="email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'your@email.com ';}"> password
+                <input type="password" class="text" value="Password " name="pass" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password ';}">
 
             </div>
 

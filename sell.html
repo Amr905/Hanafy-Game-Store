@@ -17,6 +17,18 @@
             $(".footer").load("footer.html");
 
         });
+
+        function validateserial() {
+            var ser = document.forms["product"]["serialnum"].value;
+
+            var Serial = /^\d{4}-\d{4}-\d{4}-\d{4}$/;
+
+            if (!ser.match(Serial)) {
+
+                alert("serial Invalid");
+            }
+
+        }
     </script>
 </head>
 
@@ -33,7 +45,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-9 main-container">
-                    <form id="product-form" action="#" method="post">
+                    <form name="product" onsubmit="return validateserial();" id="product-form" action="#">
                         <h4>Prouducts Mangements</h4>
 
                         <fieldset>
@@ -43,7 +55,7 @@
                             prodcuct name : <input placeholder="product Name" name="productname" type="text" required>
                         </fieldset>
                         <fieldset>
-                            Serial number : <input placeholder="serial number" name="serialnum" type="number" required>
+                            Serial number : <input placeholder="serial number" name="serialnum" type="text" required>
                         </fieldset>
                         <fieldset>
                             Price : <input placeholder="EGP" name="price" type="number" required>

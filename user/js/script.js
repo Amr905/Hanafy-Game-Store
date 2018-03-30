@@ -1,10 +1,22 @@
-function isEmailAddress() {
-    var x = document.forms["profile"]["email"].value;
-    var atpos = x.indexOf("@");
-    var dotpos = x.lastIndexOf(".");
-    if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= x.length) {
-        alert("Not a valid e-mail");
-        return false;
-    }
 
+
+function validateForm() {
+    var f = document.forms["profile"]["fname"].value;
+    var l = document.forms["profile"]["lname"].value;
+    var e = document.forms["profile"]["email"].value;
+    var Fname = /^\b[A-Za-z]{2,10}\b$/;
+    var Lname = /^\b[A-Za-z]{2,10}\b$/;
+    var Serial = /^\d{4}-\d{4}-\d{4}-\d{4}$/;
+    var mail = /(.+)@(.+){2,}\.(.+){2,}/;
+
+    if (!f.match(Fname)) {
+
+        alert("FirstName Invalid");
+    }
+    if (!l.match(Lname)) {
+        alert("lastName Invalid");
+    }
+    if (!e.match(mail)) {
+        alert("Email Invalid");
+    }
 }
