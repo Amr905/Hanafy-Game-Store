@@ -1,14 +1,12 @@
 body {
     background-color: #ecf0f1;
-    font: 300 1.25em/1.4 "Lato", sans-serif;
+    font: 300 1.25em "Lato", sans-serif;
     color: #686868;
 }
 
 
-
 h1 {
     text-align: center;
-    margin: 5px 0 1rem;
 }
 
 .sub-heading {
@@ -18,17 +16,10 @@ h1 {
 
 
 ._grid {
-    text-align: justify;
-
     font-size: 0;
-
 }
 
-._grid:after {
-    content: "";
-    display: inline-block;
-    width: 100%;
-}
+
 
 ._column {
     display: inline-block;
@@ -39,7 +30,7 @@ h1 {
 }
 
 ._btn {
-    display: inline-block;
+
     background-color: #bdc3c7;
     border: none;
     padding: .5em .75em;
@@ -64,25 +55,15 @@ h1 {
 
 .shopping-cart--list-item {
     border: 1px solid #bdc3c7;
-    margin-bottom: 30px;
-    height: 10rem;
+    margin-bottom: 40px;
+
 
 }
-
-
-
-.shopping-cart--list-item > ._column {
-    height: 100%;
-}
-
-
 
 .product-image {
     width: 16%;
 
 }
-
-
 
 .product-info {
     width: 71%;
@@ -90,7 +71,7 @@ h1 {
 }
 
 .product-name {
-    font: 300 2.4em/1 "Lato", sans-serif;
+    font: 300 2.4em "Lato", sans-serif;
     letter-spacing: -.025em;
 
 }
@@ -128,14 +109,13 @@ h1 {
 
 .product-remove {
     font-size: .875em;
-    margin-top: 3.35rem;
+    margin-top: 60px;
+
     background-color: #e74c3c;
     color: #ecf0f1;
     width: 100%;
 
 }
-
-
 
 .product-remove:hover {
     background-color: #c0392F;
@@ -145,11 +125,8 @@ h1 {
     border-top: 1px solid #bdc3c7;
     color: #95a5a6;
     font-size: 1.25em;
-    padding: .5rem;
+    padding: 10px;
 }
-
-
-
 
 .cart-totals {
     border-top: 1px solid #bdc3c7;
@@ -159,12 +136,12 @@ h1 {
 }
 
 .cart-totals ._column {
-    width: 19.984013%;
-    padding: .5rem;
+    width: 20%;
+    padding: 10px;
     line-height: 1.2;
 }
 
-.cart-totals ._column:not(:last-of-type) {
+.cart-totals ._column {
     border-right: 1px solid #bdc3c7;
 }
 
@@ -173,7 +150,7 @@ h1 {
 }
 
 .cart-totals-key {
-    font-size: 1.125em;
+    font-size: 1.5em;
     color: #bdc3c7;
 }
 
@@ -186,15 +163,11 @@ h1 {
     font-size: 2em;
 }
 
-._column.checkout {
-    text-align: right;
-    padding: 0;
-    margin-top: 1.5em;
-
-}
-
-
 
 ._btn.checkout-btn:hover {
     background-color: #2980b9;
+}
+
+._column.checkout {
+    margin-top: 30px;
 }
