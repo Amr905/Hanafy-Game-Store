@@ -14,7 +14,7 @@
 }
 .header-logo {
     height: inherit;
-    width: 200px;
+    width: 280px;
     margin: 0 0;
     float: left;
 }
@@ -30,9 +30,39 @@
 .logo-img {
     height: inherit;
     padding: 10px 25px;
-    max-width: 300px;
+    max-width: 500px;
+
+}
+.logo-img:hover ~ .logo-img-ani {
+    -webkit-animation-name: in; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+    animation-name: in;
+    animation-duration: 3s;
 }
 
+.logo-img-ani {
+    height: inherit;
+    position:relative;
+    left: -107px;
+    background: #181818;
+
+}
+.logo-img-ani:hover {
+    -webkit-animation-name: in; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+    animation-name: in;
+    animation-duration: 3s;
+}
+
+@-webkit-keyframes in {
+    0%   {}
+    50%  { left:-30px;}
+
+}
+@-webkit-keyframes out {
+    0%   {}
+    50%  { left:-30px;}
+}
 .search-input {
     float: left;
     border: 0;
