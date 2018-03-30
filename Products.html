@@ -31,7 +31,7 @@
                 <div class="col-lg-12">
                     <div class="H-Header">
                         <div class="H-title">
-                            <h1>Games-Action</h1>
+                            <h1 id="setTitle">Games</h1>
                         </div>
                         <hr>
                     </div>
@@ -359,6 +359,32 @@
 
     <div class="footer"></div>
 </body>
-
+<script>
+    var CurUrl;
+  
+    function changeTitle(){
+        
+        var id = CurUrl.substring(CurUrl.lastIndexOf('#')+1);
+        if(id.toLowerCase()=="action"){
+           document.getElementById('setTitle').innerHTML="Games-Action";
+        }
+        else if (id.toLowerCase()=="fps"){
+            document.getElementById('setTitle').innerHTML="Games-FPS";
+        }
+        else if (id.toLowerCase()=="horror"){
+            document.getElementById('setTitle').innerHTML="Games-Horror";
+        }
+        else{
+            document.getElementById('setTitle').innerHTML="Games";
+        }
+        
+    }
+   window.onload =function()
+   {
+       CurUrl=window.location.href;
+       changeTitle();
+       console.log(CurUrl);
+   }
+</script>
 
 </html>
