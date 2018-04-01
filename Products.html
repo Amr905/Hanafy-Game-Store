@@ -18,6 +18,7 @@
             $(".footer").load("footer.html");
 
         });
+
     </script>
 </head>
 
@@ -251,7 +252,7 @@
             </div>
 
 
-            <div class="row" style="margin-top: 20px">
+            <div class="row" style="margin-top: 20px;margin-bottom: 25px;">
                 <div class="col-lg-3">
                     <div class="Categories-filters">
                         <h3 class="categories-radio-title">Type</h3>
@@ -361,30 +362,27 @@
 </body>
 <script>
     var CurUrl;
-  
-    function changeTitle(){
-        
-        var id = CurUrl.substring(CurUrl.lastIndexOf('#')+1);
-        if(id.toLowerCase()=="action"){
-           document.getElementById('setTitle').innerHTML="Games-Action";
+
+    function changeTitle() {
+
+        var id = CurUrl.substring(CurUrl.lastIndexOf('#') + 1);
+        if (id.toLowerCase() == "action") {
+            document.getElementById('setTitle').innerHTML = "Games-Action";
+        } else if (id.toLowerCase() == "fps") {
+            document.getElementById('setTitle').innerHTML = "Games-FPS";
+        } else if (id.toLowerCase() == "horror") {
+            document.getElementById('setTitle').innerHTML = "Games-Horror";
+        } else {
+            document.getElementById('setTitle').innerHTML = "Games";
         }
-        else if (id.toLowerCase()=="fps"){
-            document.getElementById('setTitle').innerHTML="Games-FPS";
-        }
-        else if (id.toLowerCase()=="horror"){
-            document.getElementById('setTitle').innerHTML="Games-Horror";
-        }
-        else{
-            document.getElementById('setTitle').innerHTML="Games";
-        }
-        
+
     }
-   window.onload =function()
-   {
-       CurUrl=window.location.href;
-       changeTitle();
-       console.log(CurUrl);
-   }
+    window.onload = function() {
+        CurUrl = window.location.href;
+        changeTitle();
+        console.log(CurUrl);
+    }
+
 </script>
 
 </html>

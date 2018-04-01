@@ -36,6 +36,7 @@ h1 {
     padding: .5em .75em;
     text-align: center;
     font-weight: 300;
+    cursor: pointer;
 }
 
 ._btn:hover,
@@ -68,6 +69,7 @@ h1 {
 .product-info {
     width: 71%;
     padding: 10px;
+    padding-left: 30px;
 }
 
 .product-name {
@@ -125,7 +127,7 @@ h1 {
     border-top: 1px solid #bdc3c7;
     color: #95a5a6;
     font-size: 1.25em;
-    padding: 10px;
+    padding: 15px;
 }
 
 .cart-totals {
@@ -166,6 +168,7 @@ h1 {
 
 ._btn.checkout-btn:hover {
     background-color: #2980b9;
+    cursor: pointer;
 }
 
 ._column.checkout {
