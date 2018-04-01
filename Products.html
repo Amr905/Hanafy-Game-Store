@@ -18,7 +18,31 @@
             $(".footer").load("footer.html");
 
         });
+    </script>
 
+
+    <script>
+        var curUrl;
+
+        function changeTitle() {
+
+            var id = curUrl.substring(curUrl.lastIndexOf('#') + 1);
+            if (id.toLowerCase() == "action") {
+                document.getElementById('setTitle').innerHTML = "Games-Action";
+            } else if (id.toLowerCase() == "fps") {
+                document.getElementById('setTitle').innerHTML = "Games-FPS";
+            } else if (id.toLowerCase() == "horror") {
+                document.getElementById('setTitle').innerHTML = "Games-Horror";
+            } else {
+                document.getElementById('setTitle').innerHTML = "Games";
+            }
+
+        }
+        window.onload = function() {
+            curUrl = window.location.href;
+            changeTitle();
+            console.log(curUrl);
+        }
     </script>
 </head>
 
@@ -360,29 +384,6 @@
 
     <div class="footer"></div>
 </body>
-<script>
-    var CurUrl;
 
-    function changeTitle() {
-
-        var id = CurUrl.substring(CurUrl.lastIndexOf('#') + 1);
-        if (id.toLowerCase() == "action") {
-            document.getElementById('setTitle').innerHTML = "Games-Action";
-        } else if (id.toLowerCase() == "fps") {
-            document.getElementById('setTitle').innerHTML = "Games-FPS";
-        } else if (id.toLowerCase() == "horror") {
-            document.getElementById('setTitle').innerHTML = "Games-Horror";
-        } else {
-            document.getElementById('setTitle').innerHTML = "Games";
-        }
-
-    }
-    window.onload = function() {
-        CurUrl = window.location.href;
-        changeTitle();
-        console.log(CurUrl);
-    }
-
-</script>
 
 </html>
