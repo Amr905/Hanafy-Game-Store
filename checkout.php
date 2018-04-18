@@ -69,7 +69,7 @@
                         </div>
 
                         <div class="_column checkout">
-                            <form action="confirm.html">
+                            <form action="confirm.php">
                                 <button class="_btn">Checkout</button>
                             </form>
                         </div>
