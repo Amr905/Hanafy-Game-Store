@@ -40,7 +40,7 @@ if(isset($_POST['submit']))
     }
     else if ($operation_type=='delete')
     {
-        $query="UPDATE hgs.product SET out_of_stock=1";
+        $query="UPDATE hgs.product SET out_of_stock=1 WHERE id=".$product_id;
         $res= mysqli_query($dbc,$query);
         if($res){
          echo "Record Deleted successfully";
