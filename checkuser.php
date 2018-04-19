@@ -18,6 +18,7 @@ if($res){
     if($row['mail']==$My_mail&&$row['password']==$My_pass)
     {
         $_SESSION['Fn']=$row['fname'];
+        $_SESSION['id']=$row['id'];
         //echo '<p>Email:'.$row['mail'].'<br></p>';
         header("location:Home.php");
         exit;   

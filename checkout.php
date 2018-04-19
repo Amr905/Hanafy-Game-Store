@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!doctype html>
 <html>
 
@@ -10,7 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(e) {
-            $(".header").load("header.html");
+            $(".header").load("header.php");
             $(".footer").load("footer.html");
 
         });
@@ -30,25 +34,71 @@
                     <ol id="shopping-cart--list">
 
 
-                        <li class="_grid shopping-cart--list-item">
-                            <div class="_column product-image">
-                                <img src="img/ItemImg/Rust.jpg" alt="Rust game" width="140" height="180">
-                            </div>
-                            <div class="_column product-info">
-                                <h4 class="product-name">Rust Steam Key GLOBAL</h4>
-                                <p class="product-desc">Key GLOBAL</p>
-                                <div class="price product-single-price">310 EGP</div>
-                            </div>
-                            <div class="_column product-modifiers">
-                                <div class="_grid">
-                                    <button class="_btn _column product-subtract">&minus;</button>
-                                    <div class="_column product-qty">0</div>
-                                    <button class="_btn _column product-plus">&plus;</button>
+                        <?php
+
+
+    if(isset($_SESSION['id'])){
+      //  echo $_SESSION['id'];
+    require_once('/mysqli_connect.php');
+$query ="SELECT product.name, product.price,product.image FROM `cart` INNER join product ON cart.product_id=product.id WHERE user_id=".$_SESSION['id'].'' ;
+
+$res =@mysqli_query($dbc,$query);
+if($res){
+while($row = mysqli_fetch_array($res)){
+echo $row['price'];
+    $sss=100;
+echo '<li class="_grid shopping-cart--list-item">';
+echo '<div class="_column product-image">';
+echo '<img src="img/ItemImg/Rust.jpg" alt="Rust game" width="140" height="180">';
+echo '</div>';
+echo '<div class="_column product-info">';
+echo '<h4 class="product-name">'.$row['name'].'</h4>';
+echo '<p class="product-desc">Key GLOBAL</p>';
+echo '<div class="price product-single-price">'.$row['price'].' EGP</div>';
+echo '</div>';
+echo '<div class="_column product-modifiers">';
+echo '<div class="_grid">';
+echo '<button class="_btn _column product-subtract">&minus;</button>';
+echo '<div class="_column product-qty">0</div>';
+echo '<button class="_btn _column product-plus">&plus;</button>';
+echo '</div>';
+echo '<button class="_btn  product-remove">Remove</button>';
+echo '<div class="price product-total-price">'.$row['price'].'EGP</div>';
+echo '</div>';
+echo '</li>';
+
+    }
+}
+else {
+    echo "Couldnt open";
+    echo mysqli_error($dbc);
+}
+
+}else
+        echo'you must login to use cart';
+?>
+
+
+
+                            <li class="_grid shopping-cart--list-item">
+                                <div class="_column product-image">
+                                    <img src="img/ItemImg/Rust.jpg" alt="Rust game" width="140" height="180">
                                 </div>
-                                <button class="_btn  product-remove">Remove</button>
-                                <div class="price product-total-price">310EGP</div>
-                            </div>
-                        </li>
+                                <div class="_column product-info">
+                                    <h4 class="product-name">Rust Steam Key GLOBAL</h4>
+                                    <p class="product-desc">Key GLOBAL</p>
+                                    <div class="price product-single-price">310 EGP</div>
+                                </div>
+                                <div class="_column product-modifiers">
+                                    <div class="_grid">
+                                        <button class="_btn _column product-subtract">&minus;</button>
+                                        <div class="_column product-qty">0</div>
+                                        <button class="_btn _column product-plus">&plus;</button>
+                                    </div>
+                                    <button class="_btn  product-remove">Remove</button>
+                                    <div class="price product-total-price">310EGP</div>
+                                </div>
+                            </li>
 
 
                     </ol>
