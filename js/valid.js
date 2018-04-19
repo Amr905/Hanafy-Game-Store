@@ -11,15 +11,19 @@ function validateup() {
     if (!f.match(Fname)) {
 
         alert("FirstName Invalid");
+        return false;
     }
     if (!l.match(Lname)) {
         alert("lastName Invalid");
+        return false;
     }
     if (!e.match(mail)) {
         alert("Email Invalid");
+        return false;
     }
     if (!p.match(pass)){
         alert("Password invalid");
+        return false;
     }
 }
 function validatein() {
@@ -31,8 +35,10 @@ function validatein() {
 
     if (!e.match(mail)) {
         alert("Email Invalid");
+        return false;
     }
     if (!p.match(pass)){
-        alert("Password invalid");
+       alert("Password invalid");
+        return false;
     }
 }

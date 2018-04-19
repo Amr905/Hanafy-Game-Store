@@ -36,9 +36,11 @@
 
         <h2>Or Login with</h2>
 
-
+        <h6 style="color:red; display:true">
+        <?php if(isset($_GET['error']))
+            echo 'Incorrect Email or Password';?></h6>   
         Email
-        <form name="signin" action="checkuser.php" method="post" onsubmit="return validatein();">
+        <form name="signin" action="checkuser.php" method="post" onsubmit="return validatein()">
             <div class="lable-2">
 
 
