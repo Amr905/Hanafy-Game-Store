@@ -4,7 +4,7 @@
 <head>
     <title>HGS</title>
     <script>
-        window.location.href = "Home.htm";
+        window.location.href = "Home.php";
 
     </script>
 </head>
@@ -27,4 +27,5 @@ print "</head>\n";
 print "\n";
 print "</html>";
 */
+
 ?>
