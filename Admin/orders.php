@@ -19,6 +19,7 @@
             $("#footer").load("includes/footer.html");
 
         });
+
     </script>
 </head>
 
@@ -49,10 +50,31 @@
 
 
             <div class="col-lg-8 offwhite">
-                order number: 123 <br> date:25-3-2018<br> items:<br> battlefield one 100EGP<br>Uncharted 200EGP<br>total: 300
-                <hr> order number: 124 <br> date:25-3-2018<br> items:<br> battlefield one 100EGP<br>total: 100EGP
-                <hr> order number: 125 <br> date:25-3-2018<br> items:<br> Uncharted 200EGP<br>total: 200
-                <hr>
+                <?php
+require_once('../mysqli_connect.php');
+
+$query ="SELECT order.id, user.fname,user.lname ,product.name,order.price FROM `order` INNER JOIN product ON product_id=product.id INNER JOIN user ON order.user_id=user.id";
+
+$res =@mysqli_query($dbc,$query);
+if($res){
+while($row = mysqli_fetch_array($res))
+{
+    echo '<strong>order number: </strong> '.
+   $row['id'].'<br>  <strong>name: </strong> '.
+   $row['fname'].' '.$row['lname'].'<br>  <strong>product name : </strong> '.
+
+   $row['name'].
+'<br><strong> total: </strong>'. $row['price'];
+    echo '<hr>';
+}
+
+}
+else {
+    echo "Couldnt open";
+    echo mysqli_error($dbc);
+}
+
+?>
             </div>
             <div id="footer"></div>
         </div>
