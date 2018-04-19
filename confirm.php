@@ -16,6 +16,7 @@
             $(".footer").load("footer.html");
 
         });
+
     </script>
 
 </head>
@@ -31,7 +32,25 @@
                 <br>
                 <h3> Order Successfully Placed</h3>
                 <hr>
-                <h4 style="">your order number is : 150908</h4>
+                <h4 style="">your order number is :
+                    <?php
+require_once('/mysqli_connect.php');
+$query ="SELECT COUNT(id) As 'number' FROM `order` ";
+
+$res =@mysqli_query($dbc,$query);
+if($res){
+while($row = mysqli_fetch_array($res))
+echo $row['number']+1;
+
+}
+
+else {
+    echo "Couldnt open";
+    echo mysqli_error($dbc);
+}
+
+?>
+                </h4>
             </div>
 
         </div>
