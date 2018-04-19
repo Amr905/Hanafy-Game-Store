@@ -1,6 +1,8 @@
 <?php
 require_once('/mysqli_connect.php');
 
+
+$SignupErr="";
 $query ="SELECT * FROM `user` WHERE `mail` LIKE '".$_POST['email']."' AND `password` LIKE '".$_POST['pass']."'";
 
 $res=@mysqli_query($dbc,$query);
@@ -12,13 +14,15 @@ if($res){
     $row = mysqli_fetch_array($res);
     if($row['mail']==$My_mail&&$row['password']==$My_pass)
     {
-        echo '<p>Email:'.$row['mail'].'<br></p>';
+        //echo '<p>Email:'.$row['mail'].'<br></p>';
         header("location:Home.php");
         exit;   
     }
     else {
-        echo '<p>Incorrect Email or password</p>';
-        header("location:login.php");
+       
+        $SignupErr="Incorrect Email or password";
+        header("location:login.php?error=1");
+        
       
     }
 }

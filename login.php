@@ -35,9 +35,11 @@
 
         <h2>Or Login with</h2>
 
-
+        <h6 style="color:red; display:true">
+        <?php if(isset($_GET['error']))
+            echo 'Incorrect Email or Password';?></h6>   
         Email
-        <form name="signin" action="checkuser.php" method="post" onsubmit="return validatein();">
+        <form name="signin" action="checkuser.php" method="post" onsubmit="return validatein()">
             <div class="lable-2">
 
 
@@ -46,7 +48,7 @@
 
             </div>
 
-            <h2> hey,no&nbsp;account yet?<a href="signup.html"> create one</a></h2>
+            <h2> hey,no&nbsp;account yet?<a href="signup.php"> create one</a></h2>
 
             <div class="submit">
                 <input type="submit" name="submit" onclick="" value="Login">
