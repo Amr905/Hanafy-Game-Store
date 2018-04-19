@@ -17,6 +17,7 @@
             $(".footer").load("footer.html");
 
         });
+
     </script>
 </head>
 
@@ -65,5 +66,3 @@
 
 
 </html>
-
-

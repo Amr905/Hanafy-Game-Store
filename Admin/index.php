@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en-US">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,12 +28,13 @@
 
                 });
             });
+
         </script>
         <div class="login">
             <div class="login-triangle"></div>
             <h2 class="login-header">ADMIN Log in</h2>
             <div id="login-hide">
-                <form class="login-container" action="main.html">
+                <form class="login-container" action="main.php">
                     <p class="icon"><input type="text" placeholder="&#xf007; User Name"></p>
                     <p class="icon"><input type="password" placeholder="&#xf084; Password"></p>
                     <p><input type="submit" value="Log in"></p>
@@ -45,4 +47,5 @@
 
 
 </body>
+
 </html>
