@@ -47,31 +47,41 @@
 
 
             <div class="col-lg-8 offwhite">
-                <form id="product-form" action="#" method="post">
+                <form id="product-form" action="adminOperations.php" method="post">
                     <h4>Prouducts Mangements</h4>
 
                     <fieldset>
                         prodcuct ID : <input placeholder="product ID" name="productid" type="number" autofocus>
                     </fieldset>
                     <fieldset>
-                        prodcuct name : <input placeholder="product Name" name="productname" type="text" required>
+                        prodcuct name : <input placeholder="product Name" name="productname" type="text" >
                     </fieldset>
                     <fieldset>
-                        Serial number : <input placeholder="serial number" name="serialnum" type="number" required>
+                        Serial number : <input placeholder="serial number" name="serialnum" type="number" >
                     </fieldset>
                     <fieldset>
-                        Price : <input placeholder="EGP" name="price" type="number" required>
+                        Price : <input placeholder="EGP" name="price" type="number" >
                     </fieldset>
+
                     <fieldset>
-                        Status:
-                        <select name="status">
-                                <option value="update" selected>update</option>
-                                <option value="insert">insert</option>
-                                <option value="delete">delete</option>
+                        Genre :
+                        <select name="Genre" style="margin-bottom:2%">
+                                <option name="Action" value="Action" >Action</option>
+                                <option name="FPS" value="FPS"selected>FPS</option>
+                                <option name="Horror" value="Horror">Horror</option>
                           </select>
                     </fieldset>
                     <fieldset>
-                        <button name="submit" type="submit" id="submit">Submit</button>
+                        Operations :
+                        <select name="status" style="margin-bottom:2%">
+                                <option name="update" value="update" >update</option>
+                                <option name="insert" value="insert"selected>insert</option>
+                                <option name="delete" value="delete">delete</option>
+                          </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <button name="submit" type="submit" id="submit" style="margin-bottom:2%">Submit</button>
                     </fieldset>
                 </form>
             </div>
