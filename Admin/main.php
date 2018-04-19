@@ -27,24 +27,24 @@ require_once('../mysqli_connect.php');
 
 ?>
 
-    <body>
+<body>
 
-        <div class="row">
-            <div class="col-lg-3 front">
+    <div class="row">
+        <div class="col-lg-3 front">
 
-                <div id="header"></div>
-            </div>
+            <div id="header"></div>
+        </div>
 
-            <!--right page-->
-            <div class="col-lg-9">
-                <div class="row">
-                    <div class="col-lg-9 bar">
-                        <div class="row">
-                            <div class="col-lg-7 message-height ">
-                                <h4>Welcome Admin: Amr</h4>
-                            </div>
-                            <div class="col-lg-1 size">
-                                <a href="inbox.html" class="fa fa-envelope size white"><span class="notification"><?php
+        <!--right page-->
+        <div class="col-lg-9">
+            <div class="row">
+                <div class="col-lg-9 bar">
+                    <div class="row">
+                        <div class="col-lg-7 message-height ">
+                            <h4>Welcome Admin: Amr</h4>
+                        </div>
+                        <div class="col-lg-1 size">
+                            <a href="inbox.php" class="fa fa-envelope size white"><span class="notification"><?php
                                 $query ="SELECT COUNT(id) As 'number' FROM `mail`";
 
 $res =@mysqli_query($dbc,$query);
@@ -55,23 +55,23 @@ while($row = mysqli_fetch_array($res))
 }
 
 ?></span></a>
-                            </div>
-                            <div class="col-lg-3  message-height">
-                                <a href="index.html" class="logout">logout</a>
-                            </div>
+                        </div>
+                        <div class="col-lg-3  message-height">
+                            <a href="index.html" class="logout">logout</a>
                         </div>
                     </div>
                 </div>
-                <!--first  row boxes-->
-                <div class="row three-boxes">
-                    <div class="col-lg-3">
-                        <div class="admin-box blue">
-                            <div class="icon">
-                                <i class="fa fa-users"></i>
-                            </div>
-                            <h3>Users</h3>
-                            <h4>
-                                <?php
+            </div>
+            <!--first  row boxes-->
+            <div class="row three-boxes">
+                <div class="col-lg-3">
+                    <div class="admin-box blue">
+                        <div class="icon">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        <h3>Users</h3>
+                        <h4>
+                            <?php
                                 $query ="SELECT COUNT(id) As 'number' FROM `user` WHERE `level` = 1";
 
 $res =@mysqli_query($dbc,$query);
@@ -82,28 +82,28 @@ while($row = mysqli_fetch_array($res))
 }
 
 ?>
-                            </h4>
-                        </div>
+                        </h4>
                     </div>
+                </div>
 
-                    <div class="col-lg-3">
-                        <div class="admin-box red">
-                            <div class="icon">
-                                <i class="fa fa-users"></i>
-                            </div>
-                            <h3> sellers</h3>
-                            <h4>518</h4>
+                <div class="col-lg-3">
+                    <div class="admin-box red">
+                        <div class="icon">
+                            <i class="fa fa-users"></i>
                         </div>
+                        <h3> sellers</h3>
+                        <h4>518</h4>
                     </div>
+                </div>
 
-                    <div class="col-lg-3">
-                        <div class="admin-box purple">
-                            <div class="icon">
-                                <i class="fa fa-file-alt"></i>
-                            </div>
-                            <h3>Total Orders</h3>
-                            <h4>
-                                <?php
+                <div class="col-lg-3">
+                    <div class="admin-box purple">
+                        <div class="icon">
+                            <i class="fa fa-file-alt"></i>
+                        </div>
+                        <h3>Total Orders</h3>
+                        <h4>
+                            <?php
                                 $query ="SELECT COUNT(id) As 'number' FROM `order` ";
 
 $res =@mysqli_query($dbc,$query);
@@ -113,21 +113,21 @@ while($row = mysqli_fetch_array($res))
 
 }
                                 ?>
-                            </h4>
-                        </div>
+                        </h4>
                     </div>
                 </div>
-                <!--second row-->
+            </div>
+            <!--second row-->
 
-                <div class="row three-boxes">
-                    <div class="col-lg-3">
-                        <div class="admin-box green">
-                            <div class="icon">
-                                <i class="fa fa-gamepad"></i>
-                            </div>
-                            <h3>Available prouducts</h3>
-                            <h4>
-                                <?php
+            <div class="row three-boxes">
+                <div class="col-lg-3">
+                    <div class="admin-box green">
+                        <div class="icon">
+                            <i class="fa fa-gamepad"></i>
+                        </div>
+                        <h3>Available prouducts</h3>
+                        <h4>
+                            <?php
 
                                 $query ="SELECT COUNT(id) As 'number' FROM `product` ";
 
@@ -137,28 +137,28 @@ while($row = mysqli_fetch_array($res))
 echo $row['number'];
 
 }?>
-                            </h4>
-                        </div>
+                        </h4>
                     </div>
+                </div>
 
-                    <div class="col-lg-3">
-                        <div class="admin-box blue">
-                            <div class="icon">
-                                <i class="fa fa-file-alt"></i>
-                            </div>
-                            <h3>waiting orders</h3>
-                            <h4>15</h4>
+                <div class="col-lg-3">
+                    <div class="admin-box blue">
+                        <div class="icon">
+                            <i class="fa fa-file-alt"></i>
                         </div>
+                        <h3>waiting orders</h3>
+                        <h4>15</h4>
                     </div>
+                </div>
 
-                    <div class="col-lg-3">
-                        <div class="admin-box">
-                            <div class="icon">
-                                <i class="fa fa-shopping-cart"></i>
-                            </div>
-                            <h3>Items in cart</h3>
-                            <h4>
-                                <?php
+                <div class="col-lg-3">
+                    <div class="admin-box">
+                        <div class="icon">
+                            <i class="fa fa-shopping-cart"></i>
+                        </div>
+                        <h3>Items in cart</h3>
+                        <h4>
+                            <?php
                                 $query ="SELECT COUNT(id) As 'number' FROM `cart` ";
 
 $res =@mysqli_query($dbc,$query);
@@ -171,17 +171,17 @@ while($row = mysqli_fetch_array($res))
 
 
                                 ?>
-                            </h4>
-                        </div>
+                        </h4>
                     </div>
                 </div>
-
-                <div id="footer"></div>
             </div>
 
+            <div id="footer"></div>
         </div>
 
-    </body>
+    </div>
+
+</body>
 
 
 

@@ -24,8 +24,6 @@
             $(document).ready(function() {
                 $(".login").hover(function() {
                     $("#login-hide").fadeIn();
-
-
                 });
             });
 
