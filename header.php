@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <link rel="stylesheet" href="/css/header.css" type="text/css">
 <a href="/" class="header-logo">
     <img class="logo-img" src="/img/logo.png" alt="Logo">
@@ -16,7 +20,8 @@
 </div>
 <div class="login">
     <button class="header-btn">
-        <a href="/login.php">Login</a>
+        <a href="/login.php"><?php if(isset($_SESSION['Fn'])){echo $_SESSION['Fn']; }
+            else {echo 'Login';}?></a>
     </button>
 </div>
 <div class="cart-section">

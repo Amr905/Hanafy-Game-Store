@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 require_once('/mysqli_connect.php');
 
 
@@ -14,6 +17,7 @@ if($res){
     $row = mysqli_fetch_array($res);
     if($row['mail']==$My_mail&&$row['password']==$My_pass)
     {
+        $_SESSION['Fn']=$row['fname'];
         //echo '<p>Email:'.$row['mail'].'<br></p>';
         header("location:Home.php");
         exit;   
