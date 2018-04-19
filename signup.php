@@ -33,7 +33,7 @@
         </div>
 
         <h2>Or SignUp with</h2>
-        <form name="signup" onsubmit="return validateup();">
+        <form name="signup" onsubmit="return validateup();" method="post" action="signAdd.php">
             <div class="lable">
                 <div class="col_1_of_2 span_1_of_2"> <input name="fname" type="text" class="text" placeholder="First Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'First Name';}"></div>
                 <div class="col_1_of_2 span_1_of_2"><input name="lname" type="text" class="text" value="Last Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Last Name';}"></div>
@@ -50,10 +50,13 @@
             Confirm Password
             <input type="password" class="text" placeholder="Password " onfocus="this.value = '';">
             <br>
+            
             <h2>already have an account ?<a href="login.html">login</a></h2>
             <div class="submit">
-                <input type="submit" onclick="" value="Create account">
+                <input type="submit" onclick="" name="submit" value="Create account">
             </div>
+            
+            
             <div class="clear"> </div>
         </form>
         <br><br>

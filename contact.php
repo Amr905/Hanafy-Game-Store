@@ -35,7 +35,7 @@
                         <h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">CONTACT <span>US</span></h2>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-offset="50" data-wow-delay="0.9s">
-                        <form action="#" method="post">
+                        <form action="cont.php" method="post">
                             <label>NAME</label>
                             <input name="fullname" type="text" class="form-control" id="fullname">
 
@@ -45,7 +45,7 @@
                             <label>MESSAGE</label>
                             <textarea name="message" rows="4" class="form-control" id="message"></textarea>
 
-                            <input type="submit" class="form-control">
+                            <input type="submit" name="submit"  class="form-control">
                         </form>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInRight" data-wow-offset="50" data-wow-delay="0.6s">
@@ -53,7 +53,7 @@
     						<p class="address-title">OUR Information</p>
     						<span>You are welcomed to call our support or just send and e-mail</span>
     						<p><i class="fa fa-phone"></i> +202 26300013 / 14 / 15 / 16 / 17 / 18</p>
-    						<p><i class="fa fa-envelope-o"></i> customerSupport@HGS.con</p>
+    						<p><i class="fa fa-envelope-o"></i> customerSupport@HGS.com</p>
 
 			<br>
     					</address>
