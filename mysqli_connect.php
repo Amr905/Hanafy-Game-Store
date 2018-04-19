@@ -7,7 +7,7 @@ define('DB_Name', 'hgs');
 $dbc = @mysqli_connect(DB_HOST,DB_user,DB_PASSWORD,DB_Name)
 OR die('Could not connect to mysql '.mysqli_connect_error());
 
-$query ="SELECT * FROM `order`";
+/*$query ="SELECT * FROM `order`";
 
 $res =@mysqli_query($dbc,$query);
 if($res){
@@ -32,5 +32,5 @@ echo '</table>';
 else {
     echo "Couldnt open";
     echo mysqli_error($dbc);
-}
+}*/
 ?>

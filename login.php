@@ -37,7 +37,7 @@
 
 
         Email
-        <form name="signin" action="user/dashboard.html" onsubmit="return validatein();">
+        <form name="signin" action="checkuser.php" method="post" onsubmit="return validatein();">
             <div class="lable-2">
 
 
@@ -49,7 +49,7 @@
             <h2> hey,no&nbsp;account yet?<a href="signup.html"> create one</a></h2>
 
             <div class="submit">
-                <input type="submit" onclick="" value="Login">
+                <input type="submit" name="submit" onclick="" value="Login">
             </div>
             <div class="clear"> </div>
         </form>
