@@ -1,5 +1,10 @@
+
+<?php
+session_start(); 
+?>
 <!doctype html>
 <html>
+
 
 
 <head>
@@ -41,18 +46,20 @@ require_once('../mysqli_connect.php');
                 <div class="col-lg-9 bar">
                     <div class="row">
                         <div class="col-lg-7 message-height ">
-                            <h4>Welcome Admin: Amr</h4>
+                        
+                            <h4><?php echo 'Welcome Admin: '. $_SESSION['Fname'].' '.$_SESSION['Lname']?></h4>
+
                         </div>
                         <div class="col-lg-1 size">
                             <a href="inbox.php" class="fa fa-envelope size white"><span class="notification"><?php
                                 $query ="SELECT COUNT(id) As 'number' FROM `mail`";
 
-$res =@mysqli_query($dbc,$query);
-if($res){
-while($row = mysqli_fetch_array($res))
-    echo $row['number'];
+                                $res =@mysqli_query($dbc,$query);
+                                if($res){
+                                while($row = mysqli_fetch_array($res))
+                                    echo $row['number'];
 
-}
+                                }
 
 ?></span></a>
                         </div>

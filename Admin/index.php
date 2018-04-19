@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HGS ADMIN</title>
+    <script src="../js/valid.js"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/login.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -31,11 +32,18 @@
         <div class="login">
             <div class="login-triangle"></div>
             <h2 class="login-header">ADMIN Log in</h2>
+            
             <div id="login-hide">
-                <form class="login-container" action="main.php">
-                    <p class="icon"><input type="text" placeholder="&#xf007; User Name"></p>
-                    <p class="icon"><input type="password" placeholder="&#xf084; Password"></p>
-                    <p><input type="submit" value="Log in"></p>
+           
+                <form name="signin" class="login-container" action="checkadmin.php" method="post">
+
+                <h6 style="color:red; display:true">
+            <?php if(isset($_GET['error']))
+            echo 'Incorrect Privilege level';?></h6>  
+
+                    <p class="icon"><input type="text" name="email" placeholder="&#xf007; Email"></p>
+                    <p class="icon"><input type="password" name="pass" placeholder="&#xf084; Password"></p>
+                    <p><input type="submit" name="submit" value="Log in"></p>
                 </form>
             </div>
             <!-- Copyrights Section -->
