@@ -1,5 +1,94 @@
 <!doctype html>
 <html>
+<?php
+
+
+            if(isset($_POST['submit']))
+            {
+                $data_missing = array();
+
+                if(empty($_POST['first_name']))
+                {
+                 $data_missing[] = 'First Name';
+                }
+                else
+                {
+                    $fname  = trim($_POST['fname']);
+                }
+
+                if(empty($_POST['lname']))
+                {
+                 $data_missing[] = 'Last Name';
+                }
+                else
+                {
+                    $lname  = trim($_POST['lname']);
+                }
+
+                if(empty($_POST['email']))
+                {
+                 $data_missing[] = 'email';
+                }
+                else
+                {
+                   $email  = trim($_POST['email']);
+                }
+
+                if(empty($_POST['password']))
+                {
+                 $data_missing[] = 'password';
+                }
+                else
+                {
+                   $password = trim($_POST['password']);
+                }
+
+                if(empty($data_missing))
+                {
+
+                    require_once('mysqli_connect.php');
+
+                    $query ="INSERT INTO user(fname,lname,mail,password) VALUES(,,,)";
+
+                    $dbc = @mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)OR die('Could not connect to mysql '.mysqli_connect_error());
+
+                    $stmt = mysqli_prepare($dbc, $query);
+
+
+                    mysqli_stmt_bind_param($fname,$lname,$email,$password);
+
+                    mysqli_stmt_execute($stmt);
+
+                    $affected_rows = mysqli_stmt_affected_rows($stmt);
+
+                    if($affected_rows == 1)
+                    {
+                        echo 'User Data Entered';
+
+                        mysqli_stmt_close($stmt);
+
+                        mysqli_close($dbc);
+                    }
+
+                    else
+                    {
+                        echo 'Error Occurredbr ';
+                        echo mysqli_error();
+                        mysqli_stmt_close($stmt);
+                        mysqli_close($dbc);
+                    }
+                }
+                else
+                {
+                    echo 'You need to enter the following databr ';
+
+                    foreach($data_missing as $missing)
+                    {
+                        echo $missingbr ;
+                    }
+                }
+            }
+             ?>
 
 <head>
     <title>signup-Hanafy Game Store </title>
@@ -16,6 +105,7 @@
             $(".footer").load("footer.html");
 
         });
+
     </script>
 </head>
 
@@ -72,5 +162,3 @@
 
 
 </html>
-
-
