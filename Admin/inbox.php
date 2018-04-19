@@ -2,6 +2,7 @@
 <html>
 
 
+
 <head>
     <title>Admin-Inbox</title>
     <meta charset="utf-8">
@@ -18,6 +19,7 @@
             $("#footer").load("includes/footer.html");
 
         });
+
     </script>
     <!--upgrade of font awsome v5 -->
 
@@ -52,12 +54,29 @@
 
 
             <div class="col-lg-8 offwhite">
-                from: Amr <br> message: test test
-                <hr>from: <br> message:
-                <hr>from: <br> message:
-                <hr> from: <br> message:
-                <hr> from: <br> message:
-                <hr>
+                <?php
+require_once('../mysqli_connect.php');
+$query ="SELECT * FROM `mail`";
+
+$res =@mysqli_query($dbc,$query);
+if($res){
+while($row = mysqli_fetch_array($res))
+{
+    echo '<strong>from:</strong> '.
+   $row['name'].'<br>  <strong>mail:</strong> '.
+   $row['mail'].'<br><strong> message: </strong>'.
+   $row['message'];
+
+    echo '<hr>';
+}
+
+}
+else {
+    echo "Couldnt open";
+    echo mysqli_error($dbc);
+}
+
+?>
             </div>
             <div id="footer"></div>
         </div>

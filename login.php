@@ -17,6 +17,7 @@
             $(".footer").load("footer.html");
 
         });
+
     </script>
 </head>
 
@@ -46,7 +47,7 @@
 
             </div>
 
-            <h2> hey,no&nbsp;account yet?<a href="signup.html"> create one</a></h2>
+            <h2> hey,no&nbsp;account yet?<a href="signup.php"> create one</a></h2>
 
             <div class="submit">
                 <input type="submit" name="submit" onclick="" value="Login">
@@ -63,5 +64,3 @@
 
 
 </html>
-
-
