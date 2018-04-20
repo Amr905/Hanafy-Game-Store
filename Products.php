@@ -18,6 +18,7 @@
             $(".footer").load("footer.html");
 
         });
+
     </script>
 
 
@@ -43,6 +44,7 @@
             changeTitle();
             console.log(curUrl);
         }
+
     </script>
 </head>
 

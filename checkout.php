@@ -39,6 +39,11 @@ session_start();
 
     if(isset($_SESSION['id'])){
       //  echo $_SESSION['id'];
+
+
+        //
+
+        //
     require_once('/mysqli_connect.php');
 $query ="SELECT product.name, product.price,product.image FROM `cart` INNER join product ON cart.product_id=product.id WHERE user_id=".$_SESSION['id'].'' ;
 
@@ -48,9 +53,10 @@ if($res){
 while($row = mysqli_fetch_array($res)){
 //echo $row['price'];
  $total= $total+$row['price'];
+
 echo '<li class="_grid shopping-cart--list-item">';
 echo '<div class="_column product-image">';
-echo '<img src="img/ItemImg/Rust.jpg" alt="Rust game" width="140" height="180">';
+echo '<img src="data:image/jpeg;base64'.base64_encode($row['image']).'"  alt="Rust game" width="140" height="180">';
 echo '</div>';
 echo '<div class="_column product-info">';
 echo '<h4 class="product-name">'.$row['name'].'</h4>';
