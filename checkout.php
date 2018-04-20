@@ -56,7 +56,7 @@ while($row = mysqli_fetch_array($res)){
 
 echo '<li class="_grid shopping-cart--list-item">';
 echo '<div class="_column product-image">';
-echo '<img src="data:image/jpeg;base64'.base64_encode($row['image']).'"  alt="Rust game" width="140" height="180">';
+echo '<img src="data:image/jpeg;base64,'.base64_encode($row['image']).'"  alt="Rust game" width="140" height="180">';
 echo '</div>';
 echo '<div class="_column product-info">';
 echo '<h4 class="product-name">'.$row['name'].'</h4>';

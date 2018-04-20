@@ -73,12 +73,12 @@
                         </div>
 
                         <div style="width: 470px;height: 42px;margin-left: 30%">
-                            <button class="btn btn-success btn-block" data-loading="false">
+                            <button onclick="window.location.href='addToCart.php?item=<?php echo $row['id'] ?>'" class="btn btn-success btn-block" data-loading="false">
                             <span class="btn-lable">Add to Cart</span>
                         </button>
                         </div>
                         <div style="width: 470px;height: 42px;margin-left: 30%">
-                            <button class="btn btn-warning btn-block" style="margin-top: 2%;" data-loading="false">
+                            <button onclick="window.location.href='checkout.php'" class="btn btn-warning btn-block" style="margin-top: 2%;" data-loading="false">
                                 <span class="btn-lable">Check out</span>
                             </button>
                         </div>
