@@ -104,6 +104,39 @@ else {
 -->
                     </ol>
 
+                   <?php
+                    if(isset($_SESSION['id'])){
+                     $final_total=($total+$total*14/100)   ;
+echo '<footer class="_grid cart-totals">';
+echo '<div class="_column subtotal" id="subtotalCtr">';
+echo '<div class="cart-totals-key">Subtotal</div>';
+echo '<div class="cart-totals-value">';
+echo  $total.'EGP';
+echo '</div>';
+echo '</div>';
+echo '';
+echo '<div class="_column taxes" id="taxesCtr">';
+echo '<div class="cart-totals-key">Taxes (14%)</div>';
+echo '<div class="cart-totals-value">';
+echo $total*14/100 . 'EGP</div>';
+echo '</div>';
+echo '<div class="_column total" id="totalCtr">';
+echo '<div class="cart-totals-key">Total</div>';
+echo '<div class="cart-totals-value">';
+echo ''.$final_total.'EGP</div>';
+echo '</div>';
+echo '';
+echo '<div class="_column checkout">';
+echo '<form action="confirm.php" method="post">';
+echo '<input type="submit" name="checkout" class="form-control">';
+echo '</form>';
+echo '</div>';
+echo '</footer>';
+
+                    }
+                    ?>
+
+                    <!--
                     <footer class="_grid cart-totals">
                         <div class="_column subtotal" id="subtotalCtr">
                             <div class="cart-totals-key">Subtotal</div>
@@ -129,7 +162,7 @@ else {
                             </form>
                         </div>
                     </footer>
-
+-->
                 </section>
             </div>
 
