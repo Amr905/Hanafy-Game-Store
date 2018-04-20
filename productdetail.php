@@ -15,7 +15,7 @@
     <script>
         $(document).ready(function(e) {
             $(".header").load("header.php");
-            $(".footer").load("footer.html");
+            $(".footer").load("footer.php");
 
         });
 
@@ -26,16 +26,27 @@
     <div class="header"></div>
     <div id="content">
         <div id="wrapper">
+            <?php require_once('/mysqli_connect.php');
+            $query ="SELECT * FROM `product`" ;
+            if(!empty($_GET['id'])) {
+                $query ="SELECT * FROM `product` WHERE id= '".(int)$_GET['id']."' " ;
+
+            }
+
+
+            $res =@mysqli_query($dbc,$query);
+            if($res){
+                while($row = mysqli_fetch_array($res)){?>
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="product_title">Grand Theft Auto V Rockstar Key GLOBAL</h1>
+                    <h1 class="product_title"><?php echo $row['name'] ?></h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="Product_preview">
                         <div class="Product_preview_holder">
-                            <img src="img/ItemImg/cdpic.jpg" alt="GTA V">
+                            <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['image']).'" alt="GTA V">' ?>
                         </div>
                     </div>
                 </div>
@@ -48,15 +59,14 @@
                                 <span>price
                                 </span>
                             </p>
-                            <span class="price" style="font-size: 44px">300
+                            <span class="price" style="font-size: 44px"><?php echo $row['price'] ?>
                                     <sub class="price_Currency" style="font-size: 30px">EGP</sub>
                                 </span>
                         </div>
                         <div class="Sellers">
                             <button class="btn btn-link">
                             <span>Insted of : 28, lowest price:</span>
-                            <span class="price" style="font-size: 14px">
- 280
+                            <span class="price" style="font-size: 14px"><?php echo $row['price']+50 ?>
                                 <sub class="price_Currency" style="font-size: 10px">EGP</sub>
                             </span>
                         </button>
@@ -75,6 +85,17 @@
                     </div>
                 </div>
             </div>
+
+
+
+            <?php }
+
+            }
+
+
+            ?>
+
+
         </div>
     </div>
 
