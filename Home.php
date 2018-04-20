@@ -73,13 +73,13 @@
                 <div class="col-lg-3">
                     <div class="item_card">
                         <div class="card_img">
-                            <a href="#">
+                            <a href="<?php echo 'productdetail.php?id='.$row['id'].'' ?>">
                                 <?php echo '<img class="Selled_img_Atr" src="data:image/jpeg;base64,'.base64_encode($row['image']).'" alt="Warhammer: Vermintide 2 Steam Key GLOBAL"> ' ?>
                             </a>
                         </div>
                         <div class="card_body">
                             <h3 class="card_title">
-                                <a href="#">
+                                <a href="<?php echo 'productdetail.php?id='.$row['id'].'' ?>">
                                     <?php echo $row['name'] ?>
                                 </a>
                             </h3>

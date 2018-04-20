@@ -18,7 +18,6 @@
             $(".footer").load("footer.html");
 
         });
-
     </script>
 
 
@@ -44,7 +43,6 @@
             changeTitle();
             console.log(curUrl);
         }
-
     </script>
 </head>
 
@@ -67,37 +65,42 @@
 
             <div class="row">
 
-            <?php require_once('/mysqli_connect.php');
-            $query ="SELECT * FROM `product`" ;
+                <?php require_once('/mysqli_connect.php');
+                    $query ="SELECT * FROM `product`" ;
+                    if(!empty($_GET['genre'])) {
+                        $query ="SELECT * FROM `product` WHERE genre= '".$_GET['genre']."' " ;
+
+                    }
+
             $res =@mysqli_query($dbc,$query);
 
             if($res){
                 $i = 0;
                 while($row = mysqli_fetch_array($res)){
-                if ($i==0){?>
+                    if ($i==0){?>
 
-                   <div class="col-lg-3">
+                <div class="col-lg-3">
                     <div class="Categories-filters">
                         <h2 class=" Categories-titles">Games</h2>
                         <div style="max-height:250px">
                             <ul class="categories-list">
                                 <li class="categories-list-item">
-                                    <a href="#">Action</a>
+                                    <a href="?genre=action">Action</a>
                                 </li>
                                 <li class="categories-list-item">
-                                    <a href="#">Adventure</a>
+                                    <a href="?genre=adventure">Adventure</a>
                                 </li>
                                 <li class="categories-list-item">
-                                    <a href="#">MMO</a>
+                                    <a href="?genre=mmo">MMO</a>
                                 </li>
                                 <li class="categories-list-item">
-                                    <a href="#">Racing</a>
+                                    <a href="?genre=racing">Racing</a>
                                 </li>
                                 <li class="categories-list-item">
-                                    <a href="#">Horror</a>
+                                    <a href="?genre=horror">Horror</a>
                                 </li>
                                 <li class="categories-list-item">
-                                    <a href="#">Shooter/FPS</a>
+                                    <a href="?genre=fps">Shooter/FPS</a>
                                 </li>
                             </ul>
                         </div>
@@ -202,13 +205,14 @@
                 <div class="col-lg-3">
                     <div class="item_card">
                         <div class="card_img">
-                            <a href="#">
+                            <a href="<?php echo 'productdetail.php?id='.$row['id'].'' ?>">
                                 <?php echo '<img class="Selled_img_Atr" src="data:image/jpeg;base64,'.base64_encode($row['image']).'" alt="Warhammer: Vermintide 2 Steam Key GLOBAL"> ' ?>
                             </a>
                         </div>
                         <div class="card_body">
                             <h3 class="card_title">
-                                <a href="#"><?php echo $row['name'] ?>L</a>
+                                <a href="<?php echo 'productdetail.php?id='.$row['id'].'' ?>">
+                                    <?php echo $row['name'] ?>L</a>
                             </h3>
                         </div>
 
@@ -221,10 +225,12 @@
                     </div>
                 </div>
 
-                <?php         $i++;
-        if ($i % 3 == 0) {
-            echo '</div><div class="row"  style="margin-top: 20px">';
-        } }
+                <?php
+                    $i++;
+                    if ($i % 3 == 0) {
+                        echo '</div><div class="row"  style="margin-top: 20px">';
+                    }
+                }
             } ?>
             </div>
 
