@@ -20,7 +20,8 @@ if(isset($_POST['submit']))
        mysqli_stmt_execute($stmt);
        $affected_rows = mysqli_stmt_affected_rows($stmt);
        if($affected_rows == 1){
-        echo 'Student Entered';
+        header("location:products.php?Insuc=1");
+        echo 'Product Entered';
         mysqli_stmt_close($stmt);
         mysqli_close($dbc);
         }
@@ -30,7 +31,8 @@ if(isset($_POST['submit']))
         $query="UPDATE hgs.product SET name='".$product_name."',genre='".$Genre_type."',price='".$product_price."',serial='".$product_serial."' WHERE id=".$product_id;
        $res= mysqli_query($dbc,$query);
        if($res){
-           echo "product:".$product_name;
+        echo "product:".$product_name;
+        header("location:products.php?Upsuc=1");
         echo "Record updated successfully";
        }
        else{
@@ -40,14 +42,32 @@ if(isset($_POST['submit']))
     }
     else if ($operation_type=='delete')
     {
-        $query="UPDATE hgs.product SET out_of_stock=1 WHERE id=".$product_id;
-        $res= mysqli_query($dbc,$query);
-        if($res){
-         echo "Record Deleted successfully";
+        $query2="SELECT Count(product_id) AS 'Num' FROM hgs.order WHERE product_id=".$product_id;
+        $res2=mysqli_query($dbc,$query2);
+        $row=mysqli_fetch_array($res2);
+        if($row[0]==0){
+            $deletequery="DELETE FROM hgs.product WHERE id=".$product_id;
+            mysqli_query($dbc,$deletequery);
+            if($res2){
+                header("location:products.php?Delsuc=1");
+                echo "Record Deleted";
+               }
+               else{
+                   echo 'error'.mysqli_error_list();
+               }
         }
         else{
-            echo 'error'.mysqli_error_list();
+            $query="UPDATE hgs.product SET out_of_stock=1 WHERE id=".$product_id;
+            $res= mysqli_query($dbc,$query);
+            if($res){
+                header("location:products.php?Delsuc=1");
+                echo "Record Deleted successfully";
+               }
+               else{
+                   echo 'error'.mysqli_error_list();
+               }
         }
+       
         mysqli_close($dbc);
     }
 }
