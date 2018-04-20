@@ -5,6 +5,7 @@ session_start();
 require_once('/mysqli_connect.php');
 
 
+//Checking User credentials
 $SignupErr="";
 $query ="SELECT * FROM `user` WHERE `mail` LIKE '".$_POST['email']."' AND `password` LIKE '".$_POST['pass']."'";
 
@@ -14,7 +15,9 @@ if($res){
 
     $My_mail=trim($_POST['email']);
     $My_pass=trim($_POST['pass']);
+     //Fetching Database credentials
     $row = mysqli_fetch_array($res);
+    //Checking user Credentials with the input
     if($row['mail']==$My_mail&&$row['password']==$My_pass)
     {
         $_SESSION['Fn']=$row['fname'];
@@ -23,6 +26,7 @@ if($res){
         header("location:Home.php");
         exit;   
     }
+    //Error Ouput
     else {
        
         $SignupErr="Incorrect Email or password";

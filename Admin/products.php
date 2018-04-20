@@ -50,7 +50,7 @@
             <div class="col-lg-8 offwhite">
                 <form id="product-form" action="adminOperations.php" method="post">
                     <h4>Prouducts Mangements</h4>
-
+                      
                     <h5 style="color:Green"><?php if(isset($_GET['Insuc'])){echo 'Product inserted';} 
                                                   else if(isset($_GET['Upsuc'])){echo 'Product Updated';}
                                                    else if(isset($_GET['Delsuc'])){echo 'Product Deleted';}?></h5>
