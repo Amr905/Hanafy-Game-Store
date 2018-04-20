@@ -50,10 +50,9 @@ $row['price'];
 
 
 
-  //  $query4 ="DELETE FROM `cart` WHERE `cart`.`id` =".$_SESSION['id']."";
-   // mysql_query( $query4 );
-
-//$res3 =@mysqli_query($dbc,$query4);
+    $query4 ="DELETE FROM `cart` WHERE `cart`.`user_id` =".$_SESSION['id']."";
+    //mysql_query( $query4 );
+    $res=@mysqli_query($dbc,$query4);
      if($affected_rows == 1)
                     {
 
