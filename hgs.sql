@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 19, 2018 at 06:47 PM
+-- Generation Time: Apr 20, 2018 at 12:58 PM
 -- Server version: 5.7.21
 -- PHP Version: 5.6.35
 
@@ -36,14 +36,15 @@ CREATE TABLE IF NOT EXISTS `cart` (
   PRIMARY KEY (`id`),
   KEY `cart_product` (`product_id`),
   KEY `cart_user` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=104 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `cart`
 --
 
 INSERT INTO `cart` (`id`, `user_id`, `product_id`) VALUES
-(1, 1, 1);
+(102, 1, 1),
+(103, 1, 1);
 
 --
 -- Triggers `cart`
@@ -56,7 +57,7 @@ $$
 DELIMITER ;
 DROP TRIGGER IF EXISTS `insert_logger`;
 DELIMITER $$
-CREATE TRIGGER `insert_logger` AFTER INSERT ON `cart` FOR EACH ROW INSERT INTO cart_log
+CREATE TRIGGER `insert_logger` BEFORE INSERT ON `cart` FOR EACH ROW INSERT INTO cart_log(id,cart_id,user_id,product_id)
 VALUES (id,new.id,new.user_id,new.product_id)
 $$
 DELIMITER ;
@@ -75,7 +76,7 @@ CREATE TABLE IF NOT EXISTS `cart_log` (
   `product_id` int(10) NOT NULL,
   `status` varchar(12) NOT NULL DEFAULT 'inserted',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `cart_log`
@@ -84,7 +85,9 @@ CREATE TABLE IF NOT EXISTS `cart_log` (
 INSERT INTO `cart_log` (`id`, `cart_id`, `user_id`, `product_id`, `status`) VALUES
 (1, 6, 1, 1, 'inserted'),
 (2, 13, 2, 1, 'inserted'),
-(3, 1, 1, 1, 'inserted');
+(3, 1, 1, 1, 'inserted'),
+(4, 1, 1, 1, 'removed'),
+(5, 0, 1, 1, 'inserted');
 
 -- --------------------------------------------------------
 
@@ -99,15 +102,16 @@ CREATE TABLE IF NOT EXISTS `mail` (
   `mail` varchar(70) NOT NULL,
   `message` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `mail`
 --
 
 INSERT INTO `mail` (`id`, `name`, `mail`, `message`) VALUES
-(1, 'amr', 'adasd@asdasd.com', 'asdasdmnadf,aknasdd \r\n fkansasdflkja skldjaslfk asda'),
-(2, 'kareem', 'asdkasld@asdas,asdf', 'asfasdfkladjflkj hi kareeeem ');
+(1, 'amr morsy', 'amr905@gmail.com', 'this a test message'),
+(2, 'kareem', 'kimo@bue.com', 'this awelcome message'),
+(3, 'amr', 'amr150908@bue.edu.eg', 'hi ezyko \r\nyarab el website y3gbko amr :D');
 
 -- --------------------------------------------------------
 
@@ -124,7 +128,7 @@ CREATE TABLE IF NOT EXISTS `order` (
   PRIMARY KEY (`id`),
   KEY `user_order` (`user_id`),
   KEY `product_order` (`product_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `order`
@@ -147,7 +151,7 @@ CREATE TABLE IF NOT EXISTS `product` (
   `genre` varchar(50) NOT NULL,
   `price` int(6) NOT NULL,
   `serial` varchar(30) NOT NULL,
-  `image` blob,
+  `image` mediumblob,
   `url_img` text,
   `out_of_stock` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`)
@@ -175,7 +179,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `password` varchar(60) NOT NULL,
   `level` int(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
@@ -183,8 +187,10 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 INSERT INTO `user` (`id`, `fname`, `lname`, `mail`, `password`, `level`) VALUES
 (1, 'amr', 'morsy', 'amr150908@bue.edu.eg', 'a1234567', 1),
-(2, 'ds', 'sdf', 'msgsdfg', 'sdfsdf', 1),
-(3, 'fd', 'fd', 'ddffd', 'dfddf', 2);
+(2, 'shehab', 'eldeen', 'shebafox@hotmail.com', 'a1234567', 1),
+(3, 'zicko', 'zakeria', 'zicko@zakeria.com', 'a1234567', 2),
+(4, 'amr', 'morsy', 'amr150908@bue.edu.eg', 'a1234567', 2),
+(5, 'amr', 'morsy', 'a', '1', 2);
 
 --
 -- Constraints for dumped tables
