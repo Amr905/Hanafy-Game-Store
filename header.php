@@ -20,7 +20,7 @@ session_start();
 </div>
 <div class="login">
     <button class="header-btn">
-        <a href="/login.php"><?php if(isset($_SESSION['Fn'])){echo $_SESSION['Fn']; }
+        <a href="/login.php"><?php if(isset($_SESSION['Fn'])){echo $_SESSION['Fn']; echo '<button class="header-btn"> <a href="/logout.php">Logout</a></button>';}
             else {echo 'Login';}?></a>
     </button>
 </div>
