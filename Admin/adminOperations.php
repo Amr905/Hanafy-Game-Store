@@ -11,6 +11,7 @@ if(isset($_POST['submit']))
     $product_price=trim($_POST['price']);
     $operation_type=trim($_POST['status']);
     $Genre_type=trim($_POST['Genre']);
+    
     //Product insert Condtion
     if($operation_type=='insert')
     {

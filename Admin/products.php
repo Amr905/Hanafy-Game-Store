@@ -21,7 +21,6 @@
     </script>
 
 </head>
-
 <body>
 
     <div class="row">
@@ -48,7 +47,7 @@
 
 
             <div class="col-lg-8 offwhite">
-                <form id="product-form" action="adminOperations.php" method="post">
+                <form id="product-form" action="adminOperations.php" method="post" enctype="multipart/form-data">
                     <h4>Prouducts Mangements</h4>
                       
                     <h5 style="color:Green"><?php if(isset($_GET['Insuc'])){echo 'Product inserted';} 
@@ -66,6 +65,9 @@
                     </fieldset>
                     <fieldset>
                         Price : <input placeholder="EGP" name="price" type="number">
+                    </fieldset>
+                    <fieldset>
+                        img : <input type="file" name="img">
                     </fieldset>
 
                     <fieldset>
