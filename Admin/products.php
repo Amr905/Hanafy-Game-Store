@@ -17,6 +17,7 @@
             $("#footer").load("includes/footer.html");
 
         });
+
     </script>
 
 </head>
@@ -38,7 +39,7 @@
                         </div>
 
                         <div class="col-lg-3  message-height">
-                            <a href="index.html" class="logout">logout</a>
+                            <a href="index.php" class="logout">logout</a>
                         </div>
                     </div>
                 </div>
@@ -54,13 +55,13 @@
                         prodcuct ID : <input placeholder="product ID" name="productid" type="number" autofocus>
                     </fieldset>
                     <fieldset>
-                        prodcuct name : <input placeholder="product Name" name="productname" type="text" >
+                        prodcuct name : <input placeholder="product Name" name="productname" type="text">
                     </fieldset>
                     <fieldset>
-                        Serial number : <input placeholder="serial number" name="serialnum" type="number" >
+                        Serial number : <input placeholder="serial number" name="serialnum" type="number">
                     </fieldset>
                     <fieldset>
-                        Price : <input placeholder="EGP" name="price" type="number" >
+                        Price : <input placeholder="EGP" name="price" type="number">
                     </fieldset>
 
                     <fieldset>

@@ -13,7 +13,7 @@
 
     <script>
         $(document).ready(function(e) {
-            $(".header").load("header.html");
+            $(".header").load("header.php");
             $(".footer").load("footer.html");
 
         });
@@ -37,8 +37,9 @@
         <h2>Or Login with</h2>
 
         <h6 style="color:red; display:true">
-        <?php if(isset($_GET['error']))
-            echo 'Incorrect Email or Password';?></h6>   
+            <?php if(isset($_GET['error']))
+            echo 'Incorrect Email or Password';?>
+        </h6>
         Email
         <form name="signin" action="checkuser.php" method="post" onsubmit="return validatein()">
             <div class="lable-2">

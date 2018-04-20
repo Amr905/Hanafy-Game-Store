@@ -11,10 +11,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(e) {
-            $(".header").load("header.html");
+            $(".header").load("header.php");
             $(".footer").load("footer.html");
 
         });
+
     </script>
 </head>
 

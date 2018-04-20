@@ -41,7 +41,7 @@
                         </div>
 
                         <div class="col-lg-3  message-height">
-                            <a href="index.html" class="logout">logout</a>
+                            <a href="index.php" class="logout">logout</a>
                         </div>
                     </div>
                 </div>
