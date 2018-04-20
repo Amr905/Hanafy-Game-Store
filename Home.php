@@ -64,7 +64,7 @@
             <div class="row" style="margin-top:120px;">
 
                 <?php require_once('/mysqli_connect.php');
-            $query ="SELECT * FROM `product`" ;
+            $query ="SELECT * FROM `product` WHERE out_of_stock=0" ;
             $res =@mysqli_query($dbc,$query);
 
             if($res){

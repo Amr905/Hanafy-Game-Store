@@ -20,7 +20,9 @@ session_start();
 </div>
 <div class="login">
     <button class="header-btn">
-        <a href="/login.php"><?php if(isset($_SESSION['Fn'])){echo $_SESSION['Fn']; echo '<button class="header-btn"> <a href="/logout.php">Logout</a></button>';}
+        <a href=<?php if(isset($_SESSION['Fn']))echo '/user/dashboard.php';
+           else echo'/login.php' ?> >
+           <?php if(isset($_SESSION['Fn'])){echo $_SESSION['Fn']; echo '<button class="header-btn"> <a href="/logout.php">Logout</a></button>';}
             else {echo 'Login';}?></a>
     </button>
 </div>
@@ -61,17 +63,13 @@ session_start();
 <div class="cart-tool-bar">
     <div class="tool-cart">
         <button class="tool-selling-btn">
-            <a href="#">
+            <a href="/checkout.php">
                 <i class="fa fa-shopping-cart"></i>Cart</a>
         </button>
     </div>
     <div class="toggle selling-toggle">
         <ul class="toggle-list">
-            <li>
-                <a href="checkout.php">
-                    <span>No items in your Cart</span>
-                </a>
-            </li>
+
         </ul>
         <button class="checkout">
             <a href="checkout.php">Checkout</a>

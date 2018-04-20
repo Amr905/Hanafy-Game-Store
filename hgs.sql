@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 20, 2018 at 12:58 PM
+-- Generation Time: Apr 20, 2018 at 02:25 PM
 -- Server version: 5.7.21
 -- PHP Version: 5.6.35
 
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `cart` (
   PRIMARY KEY (`id`),
   KEY `cart_product` (`product_id`),
   KEY `cart_user` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=104 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=106 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `cart`
@@ -44,7 +44,9 @@ CREATE TABLE IF NOT EXISTS `cart` (
 
 INSERT INTO `cart` (`id`, `user_id`, `product_id`) VALUES
 (102, 1, 1),
-(103, 1, 1);
+(103, 1, 1),
+(104, 5, 1),
+(105, 4, 1);
 
 --
 -- Triggers `cart`
@@ -76,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `cart_log` (
   `product_id` int(10) NOT NULL,
   `status` varchar(12) NOT NULL DEFAULT 'inserted',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `cart_log`
@@ -87,7 +89,9 @@ INSERT INTO `cart_log` (`id`, `cart_id`, `user_id`, `product_id`, `status`) VALU
 (2, 13, 2, 1, 'inserted'),
 (3, 1, 1, 1, 'inserted'),
 (4, 1, 1, 1, 'removed'),
-(5, 0, 1, 1, 'inserted');
+(5, 0, 1, 1, 'inserted'),
+(6, 0, 5, 1, 'inserted'),
+(7, 0, 4, 1, 'inserted');
 
 -- --------------------------------------------------------
 
@@ -128,7 +132,7 @@ CREATE TABLE IF NOT EXISTS `order` (
   PRIMARY KEY (`id`),
   KEY `user_order` (`user_id`),
   KEY `product_order` (`product_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `order`
@@ -136,7 +140,13 @@ CREATE TABLE IF NOT EXISTS `order` (
 
 INSERT INTO `order` (`id`, `user_id`, `product_id`, `price`) VALUES
 (1, 1, 1, 123),
-(2, 2, 1, 12);
+(2, 2, 1, 12),
+(27, 1, 1, 123),
+(28, 1, 1, 123),
+(29, 1, 1, 123),
+(30, 1, 1, 123),
+(31, 1, 1, 123),
+(32, 1, 1, 123);
 
 -- --------------------------------------------------------
 

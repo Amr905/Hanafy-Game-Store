@@ -12,7 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(e) {
-            $(".header").load("/header.html");
+            $(".header").load("/header.php");
             $(".footer").load("/footer.html");
 
         });
@@ -31,9 +31,9 @@
                         <h3>My Account:</h3>
                     </div>
                     <ul class="user-list">
-                        <li><a href="/user/dashboard.html">Dashboard</a></li>
-                        <li><a href="/user/edit.html">Edit Profile</a></li>
-                        <li><a href="/sell.html">Sell My Games</a></li>
+                        <li><a href="/user/dashboard.php">Dashboard</a></li>
+                        <li><a href="/user/edit.php">Edit Profile</a></li>
+                        <li><a href="/sell.php">Sell My Games</a></li>
 
 
                     </ul>

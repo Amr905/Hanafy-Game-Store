@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script>
         $(document).ready(function(e) {
-            $(".header").load("/header.html");
+            $(".header").load("/header.php");
             $(".footer").load("/footer.html");
 
         });
@@ -33,9 +33,9 @@
                         <h3>My Account:</h3>
                     </div>
                     <ul class="user-list">
-                        <li><a href="/user/dashboard.html">Dashboard</a></li>
-                        <li><a href="/user/edit.html">Edit Profile</a></li>
-                        <li><a href="/sell.html">Sell My Games</a></li>
+                        <li><a href="/user/dashboard.php">Dashboard</a></li>
+                        <li><a href="/user/edit.php">Edit Profile</a></li>
+                        <li><a href="/sell.php">Sell My Games</a></li>
                     </ul>
                 </div>
                 <div class="col-8">

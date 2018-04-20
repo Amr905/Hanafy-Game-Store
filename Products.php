@@ -68,7 +68,7 @@
             <div class="row">
 
                 <?php require_once('/mysqli_connect.php');
-                    $query ="SELECT * FROM `product`" ;
+                    $query ="SELECT * FROM `product` WHERE out_of_stock=0" ;
                     if(!empty($_GET['genre'])) {
                         $query ="SELECT * FROM `product` WHERE genre= '".$_GET['genre']."' " ;
 
@@ -208,13 +208,13 @@
                     <div class="item_card">
                         <div class="card_img">
                             <a href="<?php echo 'productdetail.php?id='.$row['id'].'' ?>">
-                                <?php echo '<img class="Selled_img_Atr" src="data:image/jpeg;base64,'.base64_encode($row['image']).'" alt="Warhammer: Vermintide 2 Steam Key GLOBAL"> ' ?>
+                                <?php echo '<img class="Selled_img_Atr" src="data:image/jpeg;base64,'.base64_encode($row['image']).'" alt="Warhammer: Vermintide 2 Steam Key GLOBA"> ' ?>
                             </a>
                         </div>
                         <div class="card_body">
                             <h3 class="card_title">
                                 <a href="<?php echo 'productdetail.php?id='.$row['id'].'' ?>">
-                                    <?php echo $row['name'] ?>L</a>
+                                    <?php echo $row['name'] ?></a>
                             </h3>
                         </div>
 

@@ -69,7 +69,7 @@ echo '<button class="_btn _column product-subtract">&minus;</button>';
 echo '<div class="_column product-qty">0</div>';
 echo '<button class="_btn _column product-plus">&plus;</button>';
 echo '</div>'; ?>
-<button onclick="window.location.href='addToCart.php?delete=<?php echo $row['id'] ?>'" class="_btn product-remove">Remove</button>;
+<button onclick="window.location.href='addToCart.php?delete=<?php echo $row['id'] ?>'" class="_btn product-remove">Remove</button>
 <?php
 echo '<div class="price product-total-price">'.$row['price'].'EGP</div>';
 echo '</div>';

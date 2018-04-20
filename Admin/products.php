@@ -67,8 +67,11 @@
                     <fieldset>
                         Price : <input placeholder="EGP" name="price" type="number">
                     </fieldset>
-
+<form action="#" enctype="multipart/form-data" method="post">
+<input name="img" type="file" />
+</form>
                     <fieldset>
+
                         Genre :
                         <select name="Genre" style="margin-bottom:2%">
                                 <option name="Action" value="Action" >Action</option>
