@@ -58,7 +58,7 @@
 require_once('../mysqli_connect.php');
 $query ="SELECT * FROM `mail`";
 
-$res =@mysqli_query($dbc,$query);
+$res =@mysqli_query($dbc,$query);//result string
 if($res){
 while($row = mysqli_fetch_array($res))
 {
