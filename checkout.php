@@ -45,7 +45,7 @@ session_start();
 
         //
     require_once('/mysqli_connect.php');
-$query ="SELECT product.name, product.price,product.image FROM `cart` INNER join product ON cart.product_id=product.id WHERE user_id=".$_SESSION['id'].'' ;
+$query ="SELECT cart.id, product.name, product.price,product.image FROM `cart` INNER join product ON cart.product_id=product.id WHERE user_id=".$_SESSION['id'].'' ;
 
 $res =@mysqli_query($dbc,$query);
 if($res){
@@ -68,8 +68,9 @@ echo '<div class="_grid">';
 echo '<button class="_btn _column product-subtract">&minus;</button>';
 echo '<div class="_column product-qty">0</div>';
 echo '<button class="_btn _column product-plus">&plus;</button>';
-echo '</div>';
-echo '<button class="_btn  product-remove">Remove</button>';
+echo '</div>'; ?>
+<button onclick="window.location.href='addToCart.php?delete=<?php echo $row['id'] ?>'" class="_btn product-remove">Remove</button>;
+<?php
 echo '<div class="price product-total-price">'.$row['price'].'EGP</div>';
 echo '</div>';
 echo '</li>';
