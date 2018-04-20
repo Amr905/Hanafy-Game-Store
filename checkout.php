@@ -44,9 +44,10 @@ $query ="SELECT product.name, product.price,product.image FROM `cart` INNER join
 
 $res =@mysqli_query($dbc,$query);
 if($res){
+    $total=0;
 while($row = mysqli_fetch_array($res)){
-echo $row['price'];
-    $sss=100;
+//echo $row['price'];
+ $total= $total+$row['price'];
 echo '<li class="_grid shopping-cart--list-item">';
 echo '<div class="_column product-image">';
 echo '<img src="img/ItemImg/Rust.jpg" alt="Rust game" width="140" height="180">';
@@ -79,7 +80,7 @@ else {
 ?>
 
 
-
+                            <!--old html
                             <li class="_grid shopping-cart--list-item">
                                 <div class="_column product-image">
                                     <img src="img/ItemImg/Rust.jpg" alt="Rust game" width="140" height="180">
@@ -100,27 +101,31 @@ else {
                                 </div>
                             </li>
 
-
+-->
                     </ol>
 
                     <footer class="_grid cart-totals">
                         <div class="_column subtotal" id="subtotalCtr">
                             <div class="cart-totals-key">Subtotal</div>
-                            <div class="cart-totals-value">310EGP</div>
+                            <div class="cart-totals-value">
+                                <?php echo $total?>EGP
+                            </div>
                         </div>
 
                         <div class="_column taxes" id="taxesCtr">
                             <div class="cart-totals-key">Taxes (14%)</div>
-                            <div class="cart-totals-value">34EGP</div>
+                            <div class="cart-totals-value">
+                                <?php echo $total*14/100 ?>EGP</div>
                         </div>
                         <div class="_column total" id="totalCtr">
                             <div class="cart-totals-key">Total</div>
-                            <div class="cart-totals-value">344EGP</div>
+                            <div class="cart-totals-value">
+                                <?php echo $total+$total*14/100?>EGP</div>
                         </div>
 
                         <div class="_column checkout">
-                            <form action="confirm.php">
-                                <button class="_btn">Checkout</button>
+                            <form action="confirm.php" method="post">
+                                <input type="submit" name="checkout" class="form-control">
                             </form>
                         </div>
                     </footer>
