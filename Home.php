@@ -61,285 +61,235 @@
                     <span>Most popular Games</span>
                 </h2>
             </header>
-
             <div class="row" style="margin-top:120px;">
 
+                <?php require_once('/mysqli_connect.php');
+            $query ="SELECT * FROM `product`" ;
+            $res =@mysqli_query($dbc,$query);
+
+            if($res){
+                $i = 0;
+                while($row = mysqli_fetch_array($res)){?>
                 <div class="col-lg-3">
                     <div class="item_card">
                         <div class="card_img">
                             <a href="#">
-                                <img class="Selled_img_Atr" src="img/ItemImg/FortniteSell.jpg" alt="Fortnite standard edition Epic Games Key PC GLOBAL">
+                                <?php echo '<img class="Selled_img_Atr" src="data:image/jpeg;base64,'.base64_encode($row['image']).'" alt="Warhammer: Vermintide 2 Steam Key GLOBAL"> ' ?>
                             </a>
                         </div>
                         <div class="card_body">
                             <h3 class="card_title">
-                                <a href="#">Fortnite standard edition Epic Games Key PC GLOBAL</a>
+                                <a href="#">
+                                    <?php echo $row['name'] ?>
+                                </a>
                             </h3>
                         </div>
 
                         <div class="card_price">
-                            <span class="price">10.99
+                            <span class="price"><?php echo $row['price'] ?>
                                 <sub class="price_Currency">EGP</sub>
                             </span>
 
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="item_card">
-                        <div class="card_img">
-                            <a href="#">
-                                <img class="Selled_img_Atr" src="img/ItemImg/GTA5.jpg" alt="Fortnite standard edition Epic Games Key PC GLOBAL">
-                            </a>
-                        </div>
-                        <div class="card_body">
-                            <h3 class="card_title">
-                                <a href="#">Grand Theft Auto V Rockstar Key GLOBAL</a>
-                            </h3>
-                        </div>
 
-                        <div class="card_price">
-                            <span class="price">300.5
-                                <sub class="price_Currency">EGP</sub>
-                            </span>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="item_card">
-                        <div class="card_img">
-                            <a href="#">
-                                <img class="Selled_img_Atr" src="img/ItemImg/BF4.jpg" alt="Fortnite standard edition Epic Games Key PC GLOBAL">
-                            </a>
-                        </div>
-                        <div class="card_body">
-                            <h3 class="card_title">
-                                <a href="#">Battlefield 4 Origin Key PC GLOBAL</a>
-                            </h3>
-                        </div>
-
-                        <div class="card_price">
-                            <span class="price">150.99
-                                <sub class="price_Currency">EGP</sub>
-                            </span>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="item_card">
-                        <div class="card_img">
-                            <a href="#">
-                                <img class="Selled_img_Atr" src="img/ItemImg/PUBG.jpg" alt="Fortnite standard edition Epic Games Key PC GLOBAL">
-                            </a>
-                        </div>
-                        <div class="card_body">
-                            <h3 class="card_title">
-                                <a href="#">PLAYERUNKNOWN'S BATTLEGROUNDS (PUBG) Steam Key GLOBAL</a>
-                            </h3>
-                        </div>
-
-                        <div class="card_price">
-                            <span class="price">120
-                                <sub class="price_Currency">EGP</sub>
-                            </span>
-
-                        </div>
-                    </div>
-                </div>
+                <?php         $i++;
+        if ($i % 4 == 0) {
+            echo '</div><div class="row" style="margin-top:120px;">';
+        } }
+            } ?>
             </div>
+                <header class="U_Header">
+                    <h2>
+                        <span>Pre-orders</span>
+                    </h2>
+                </header>
+                <div class="row" style="margin-top:120px;">
 
-            <header class="U_Header">
-                <h2>
-                    <span>Pre-orders</span>
-                </h2>
-            </header>
-            <div class="row" style="margin-top:120px;">
-
-                <div class="col-lg-3">
-                    <div class="item_card">
-                        <div class="card_img">
-                            <a href="#">
+                    <div class="col-lg-3">
+                        <div class="item_card">
+                            <div class="card_img">
+                                <a href="#">
                                 <img class="Selled_img_Atr" src="img/ItemImg/WarHam.jpg" alt="Warhammer: Vermintide 2 Steam Key GLOBAL">
                             </a>
-                        </div>
-                        <div class="card_body">
-                            <h3 class="card_title">
-                                <a href="#">Warhammer: Vermintide 2 Steam Key GLOBAL</a>
-                            </h3>
-                        </div>
+                            </div>
+                            <div class="card_body">
+                                <h3 class="card_title">
+                                    <a href="#">Warhammer: Vermintide 2 Steam Key GLOBAL</a>
+                                </h3>
+                            </div>
 
-                        <div class="card_price">
-                            <span class="price">460
+                            <div class="card_price">
+                                <span class="price">460
                                 <sub class="price_Currency">EGP</sub>
                             </span>
 
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="item_card">
-                        <div class="card_img">
-                            <a href="#">
+                    <div class="col-lg-3">
+                        <div class="item_card">
+                            <div class="card_img">
+                                <a href="#">
                                 <img class="Selled_img_Atr" src="img/ItemImg/Rust.jpg" alt="Rust Steam Key GLOBAL">
                             </a>
-                        </div>
-                        <div class="card_body">
-                            <h3 class="card_title">
-                                <a href="#">Rust Steam Key GLOBAL</a>
-                            </h3>
-                        </div>
+                            </div>
+                            <div class="card_body">
+                                <h3 class="card_title">
+                                    <a href="#">Rust Steam Key GLOBAL</a>
+                                </h3>
+                            </div>
 
-                        <div class="card_price">
-                            <span class="price">310
+                            <div class="card_price">
+                                <span class="price">310
                                 <sub class="price_Currency">EGP</sub>
                             </span>
 
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="item_card">
-                        <div class="card_img">
-                            <a href="#">
+                    <div class="col-lg-3">
+                        <div class="item_card">
+                            <div class="card_img">
+                                <a href="#">
                                 <img class="Selled_img_Atr" src="img/ItemImg/COD3.jpg" alt="Call of Duty: Black Ops III Steam Key GLOBAL">
                             </a>
-                        </div>
-                        <div class="card_body">
-                            <h3 class="card_title">
-                                <a href="#">Call of Duty: Black Ops III Steam Key GLOBAL</a>
-                            </h3>
-                        </div>
+                            </div>
+                            <div class="card_body">
+                                <h3 class="card_title">
+                                    <a href="#">Call of Duty: Black Ops III Steam Key GLOBAL</a>
+                                </h3>
+                            </div>
 
-                        <div class="card_price">
-                            <span class="price">550.9
+                            <div class="card_price">
+                                <span class="price">550.9
                                 <sub class="price_Currency">EGP</sub>
                             </span>
 
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="item_card">
-                        <div class="card_img">
-                            <a href="#">
+                    <div class="col-lg-3">
+                        <div class="item_card">
+                            <div class="card_img">
+                                <a href="#">
                                 <img class="Selled_img_Atr" src="img/ItemImg/Facry5.jpg" alt="Fortnite standard edition Epic Games Key PC GLOBAL">
                             </a>
-                        </div>
-                        <div class="card_body">
-                            <h3 class="card_title">
-                                <a href="#">PLAYERUNKNOWN'S BATTLEGROUNDS (PUBG) Steam Key GLOBAL</a>
-                            </h3>
-                        </div>
+                            </div>
+                            <div class="card_body">
+                                <h3 class="card_title">
+                                    <a href="#">PLAYERUNKNOWN'S BATTLEGROUNDS (PUBG) Steam Key GLOBAL</a>
+                                </h3>
+                            </div>
 
-                        <div class="card_price">
-                            <span class="price">700
+                            <div class="card_price">
+                                <span class="price">700
                                 <sub class="price_Currency">EGP</sub>
                             </span>
 
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <header class="U_Header">
-                <h2>
-                    <span>Recently released games </span>
-                </h2>
-            </header>
-            <div class="row" style="margin-top:120px;padding-bottom: 100px; ">
-                <div class="col-lg-3">
-                    <div class="item_card">
-                        <div class="card_img">
-                            <a href="#">
+                <header class="U_Header">
+                    <h2>
+                        <span>Recently released games </span>
+                    </h2>
+                </header>
+                <div class="row" style="margin-top:120px;padding-bottom: 100px; ">
+                    <div class="col-lg-3">
+                        <div class="item_card">
+                            <div class="card_img">
+                                <a href="#">
                                 <img class="Selled_img_Atr" src="img/ItemImg/ElderScrolls5.jpg" alt="Fortnite standard edition Epic Games Key PC GLOBAL">
                             </a>
-                        </div>
-                        <div class="card_body">
-                            <h3 class="card_title">
-                                <a href="#">The Elder Scrolls V: Skyrim Steam Key GLOBAL</a>
-                            </h3>
-                        </div>
+                            </div>
+                            <div class="card_body">
+                                <h3 class="card_title">
+                                    <a href="#">The Elder Scrolls V: Skyrim Steam Key GLOBAL</a>
+                                </h3>
+                            </div>
 
-                        <div class="card_price">
-                            <span class="price">220
+                            <div class="card_price">
+                                <span class="price">220
                                 <sub class="price_Currency">EGP</sub>
                             </span>
 
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="item_card">
-                        <div class="card_img">
-                            <a href="#">
+                    <div class="col-lg-3">
+                        <div class="item_card">
+                            <div class="card_img">
+                                <a href="#">
                                 <img class="Selled_img_Atr" src="img/ItemImg/W2.jpg" alt="Fortnite standard edition Epic Games Key PC GLOBAL">
                             </a>
-                        </div>
-                        <div class="card_body">
-                            <h3 class="card_title">
-                                <a href="#">The Witcher 2 Assassins of Kings Enhanced Edition Steam Key GLOBAL</a>
-                            </h3>
-                        </div>
+                            </div>
+                            <div class="card_body">
+                                <h3 class="card_title">
+                                    <a href="#">The Witcher 2 Assassins of Kings Enhanced Edition Steam Key GLOBAL</a>
+                                </h3>
+                            </div>
 
-                        <div class="card_price">
-                            <span class="price">170
+                            <div class="card_price">
+                                <span class="price">170
                                 <sub class="price_Currency">EGP</sub>
                             </span>
 
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="item_card">
-                        <div class="card_img">
-                            <a href="#">
+                    <div class="col-lg-3">
+                        <div class="item_card">
+                            <div class="card_img">
+                                <a href="#">
                                 <img class="Selled_img_Atr" src="img/ItemImg/TheDivision.jpg" alt="Tom Clancy's The Division Uplay Key ROW">
                             </a>
-                        </div>
-                        <div class="card_body">
-                            <h3 class="card_title">
-                                <a href="#">Tom Clancy's The Division Uplay Key ROW</a>
-                            </h3>
-                        </div>
+                            </div>
+                            <div class="card_body">
+                                <h3 class="card_title">
+                                    <a href="#">Tom Clancy's The Division Uplay Key ROW</a>
+                                </h3>
+                            </div>
 
-                        <div class="card_price">
-                            <span class="price">400
+                            <div class="card_price">
+                                <span class="price">400
                                 <sub class="price_Currency">EGP</sub>
                             </span>
 
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="item_card">
-                        <div class="card_img">
-                            <a href="#">
+                    <div class="col-lg-3">
+                        <div class="item_card">
+                            <div class="card_img">
+                                <a href="#">
                                 <img class="Selled_img_Atr" src="img/ItemImg/GR.jpg" alt="Fortnite standard edition Epic Games Key PC GLOBAL">
                             </a>
-                        </div>
-                        <div class="card_body">
-                            <h3 class="card_title">
-                                <a href="#">Tom Clancy's Ghost Recon Wildlands Uplay Key ROW</a>
-                            </h3>
-                        </div>
+                            </div>
+                            <div class="card_body">
+                                <h3 class="card_title">
+                                    <a href="#">Tom Clancy's Ghost Recon Wildlands Uplay Key ROW</a>
+                                </h3>
+                            </div>
 
-                        <div class="card_price">
-                            <span class="price">290
+                            <div class="card_price">
+                                <span class="price">290
                                 <sub class="price_Currency">EGP</sub>
                             </span>
 
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
 
-    <div class="footer"></div>
+        <div class="footer"></div>
 </body>
 
 
